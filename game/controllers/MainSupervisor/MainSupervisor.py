@@ -1066,9 +1066,11 @@ class Erebus(Supervisor):
               self._last_frame == True or
               self._game_state == GameState.MATCH_FINISHED):
             # Step simulation
-            if self._game_state == GameState.MATCH_FINISHED:
-                # print("Match finished, waiting for reset...")
-                self.obs.go_to_scene(SCENES["end_scene"])
+            if self._game_state == GameState.MATCH_FINISHED and self._have_never_ended:
+                print("Match finished, waiting for reset...")
+                time.sleep(0.5)
+                self.obs.end_video()
+                self._have_never_ended = False
                 
             self.step(Erebus.TIME_STEP)
 
