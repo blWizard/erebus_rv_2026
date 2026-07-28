@@ -43,3 +43,12 @@ class ObsControl:
     def stop_record(self):
         if not self.connected: return
         self.__ws.stop_record()
+
+    def start_video(self, filename):
+        if not self.connected: return
+        self.go_to_scene(SCENES["initial_scene"])
+        self.start_record(filename)
+        time.sleep(2)
+        self.go_to_scene(SCENES["presentation_scene"])
+        time.sleep(1.5)
+        self.go_to_scene(SCENES["competition_scene"])
