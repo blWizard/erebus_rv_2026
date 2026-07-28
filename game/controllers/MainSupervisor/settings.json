@@ -1,0 +1,6 @@
+{
+    "initial_scene": "Fondo negro",
+    "presentation_scene": "Presentacion",
+    "competition_scene": "Competicion",
+    "end_scene": "Resumen"
+}
