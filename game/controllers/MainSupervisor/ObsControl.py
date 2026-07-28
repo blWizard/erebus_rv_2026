@@ -52,3 +52,9 @@ class ObsControl:
         self.go_to_scene(SCENES["presentation_scene"])
         time.sleep(1.5)
         self.go_to_scene(SCENES["competition_scene"])
+
+    def end_video(self):
+        if not self.connected: return
+        self.go_to_scene(SCENES["end_scene"])
+        time.sleep(2)
+        self.stop_record()
