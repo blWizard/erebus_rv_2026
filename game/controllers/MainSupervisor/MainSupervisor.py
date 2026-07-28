@@ -40,6 +40,7 @@ from Test import TestRunner
 from RobotWindowSender import RWSender
 from ThumbnailWriter import export_map_to_img
 from DockerHelper import run_docker_container
+from ObsControl import ObsControl, SCENES
 
 from typing import Sequence, cast
 
@@ -177,6 +178,9 @@ class Erebus(Supervisor):
         self.rws.send("currentWorld", self._get_current_world())
 
         self.rws.send("update", f"0,0,{self.max_time},0")
+
+        self.obs = ObsControl("localhost", 4455, "roboliga")
+        self.obs.connect()
 
     def load_cognitive_targets(self):
         targets = self.getFromDef('TARGETGROUP').getField("children")
