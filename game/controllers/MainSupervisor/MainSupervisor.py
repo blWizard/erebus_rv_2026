@@ -181,6 +181,9 @@ class Erebus(Supervisor):
 
         self.obs = ObsControl("localhost", 4455, "roboliga")
         self.obs.connect()
+        self.obs.start_video(f"{self._get_current_world()}_{int(time.time())}")
+        self._have_never_ended = True
+        self._game_state = GameState.MATCH_RUNNING
 
     def load_cognitive_targets(self):
         targets = self.getFromDef('TARGETGROUP').getField("children")
