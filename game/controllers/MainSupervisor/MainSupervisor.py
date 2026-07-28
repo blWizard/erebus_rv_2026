@@ -1063,7 +1063,12 @@ class Erebus(Supervisor):
               self._last_frame == True or
               self._game_state == GameState.MATCH_FINISHED):
             # Step simulation
+            if self._game_state == GameState.MATCH_FINISHED:
+                # print("Match finished, waiting for reset...")
+                self.obs.go_to_scene(SCENES["end_scene"])
+                
             self.step(Erebus.TIME_STEP)
+
 
 
 if __name__ == '__main__':
