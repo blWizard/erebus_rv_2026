@@ -93,6 +93,8 @@ class Erebus(Supervisor):
         self._last_frame: Optional[bool] = False
         self._first_frame: bool = True
         self._robot_initialised: bool = False
+        # Whether OBS recording has been started for this match (and still needs to be stopped)
+        self._have_never_ended: bool = False
 
         # How long the game has been running for
         self.time_elapsed: float = 0.0
@@ -179,10 +181,19 @@ class Erebus(Supervisor):
 
         self.rws.send("update", f"0,0,{self.max_time},0")
 
+        # NOTE(recording): connect now, but don't start recording until the
+        # match is actually started (`run`/`runTest`/`runDocker`), so there's
+        # time to load the robot json and toggle the remote controller first.
         self.obs = ObsControl("localhost", 4455, "roboliga")
         self.obs.connect()
-        self.obs.start_video(f"{self._get_current_world()}_{int(time.time())}")
-        self._have_never_ended = True
+
+    def _start_match(self) -> None:
+        """Starts the match: begins OBS recording (if not already started)
+        and switches the game state to running.
+        """
+        if not self._have_never_ended:
+            self.obs.start_video(f"{self._get_current_world()}_{int(time.time())}")
+            self._have_never_ended = True
         self._game_state = GameState.MATCH_RUNNING
 
     def load_cognitive_targets(self):
@@ -744,13 +755,13 @@ class Erebus(Supervisor):
 
             # Start running the match
             if command == "run":
-                self._game_state = GameState.MATCH_RUNNING
+                self._start_match()
                 self.rws.update_history("runPressed")
                 
             # Run tests
             if command == 'runTest':
                 if self._game_state == GameState.MATCH_NOT_STARTED:
-                    self._game_state = GameState.MATCH_RUNNING
+                    self._start_match()
                     self._run_tests = True
                     self.config.disable_lop = True
                     self.simulation_mode = self.SIMULATION_MODE_FAST
@@ -764,7 +775,7 @@ class Erebus(Supervisor):
                 if self._docker_process != None:
                     self._remote_enabled = True
                     # Start running the match
-                    self._game_state = GameState.MATCH_RUNNING
+                    self._start_match()
                     self.rws.update_history("runDockerPressed")
                     self.rws.send("dockerSuccess")
                 else:
