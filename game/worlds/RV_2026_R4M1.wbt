@@ -1,0 +1,2714 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "../protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "../protos/TexturedBackground.proto"
+EXTERNPROTO "../protos/halfTile.proto"
+EXTERNPROTO "../protos/CognitiveTarget.proto"
+EXTERNPROTO "../protos/Fake.proto"
+EXTERNPROTO "../protos/Victim.proto"
+EXTERNPROTO "../protos/worldTile.proto"
+IMPORTABLE EXTERNPROTO "../protos/custom_robot.proto"
+
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "TILE"
+      material2 "NO_FRIC"
+      coulombFriction [
+        0
+      ]
+      bounce 0
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+DEF Viewpoint Viewpoint {
+  orientation -0.683263384905471 0.683263384615832 0.25749231850840865 2.6375613663511768
+  position -0.10525152518161511 1.7506019967863333 1.4784560833994949
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF WALLTILES Group {
+  children [
+    DEF TILE worldTile {
+      floor TRUE
+      topWall 1
+      leftWall 1
+      topExternal TRUE
+      leftExternal TRUE
+      width 12
+      height 5
+      id "0"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE worldTile {
+      zPos 1
+      floor TRUE
+      leftWall 1
+      leftExternal TRUE
+      width 12
+      height 5
+      id "1"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE worldTile {
+      zPos 2
+      floor TRUE
+      rightWall 1
+      leftWall 1
+      leftExternal TRUE
+      swamp TRUE
+      width 12
+      height 5
+      id "2"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE halfTile {
+      zPos 3
+      id "3"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      leftWall 1
+      tile1Walls [
+        0, 3, 3, 0
+      ]
+      tile1External [
+        FALSE
+        FALSE
+        FALSE
+        TRUE
+      ]
+      tile3External [
+        FALSE
+        FALSE
+        FALSE
+        TRUE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      zPos 4
+      id "4"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 5
+      leftWall 3
+      tile2Walls [
+        0, 0, 5, 0
+      ]
+      tile3Walls [
+        0, 2, 0, 0
+      ]
+      tile1External [
+        FALSE
+        FALSE
+        FALSE
+        TRUE
+      ]
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        TRUE
+      ]
+      tile4External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE worldTile {
+      xPos 1
+      floor TRUE
+      topWall 1
+      topExternal TRUE
+      width 12
+      height 5
+      id "5"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF START_TILE worldTile {
+      xPos 1
+      zPos 1
+      floor TRUE
+      rightWall 1
+      start TRUE
+      width 12
+      height 5
+      id "6"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE worldTile {
+      xPos 1
+      zPos 2
+      floor TRUE
+      rightWall 3
+      width 12
+      height 5
+      id "7"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.10196078431372549 0.10196078431372549 0.9019607843137255
+      room 1
+    }
+    DEF TILE halfTile {
+      xPos 1
+      zPos 3
+      id "8"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 1
+      zPos 4
+      id "9"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 3
+      tile1Walls [
+        0, 0, 1, 0
+      ]
+      tile4Walls [
+        0, 3, 0, 0
+      ]
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE worldTile {
+      xPos 2
+      floor TRUE
+      rightWall 2
+      topWall 3
+      topExternal TRUE
+      width 12
+      height 5
+      id "10"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE worldTile {
+      xPos 2
+      zPos 1
+      floor TRUE
+      rightWall 1
+      width 12
+      height 5
+      id "11"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE worldTile {
+      xPos 2
+      zPos 2
+      rightWall 3
+      bottomWall 15
+      trap TRUE
+      width 12
+      height 5
+      id "12"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 1
+    }
+    DEF TILE halfTile {
+      xPos 2
+      zPos 3
+      id "13"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 2
+      zPos 4
+      id "14"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 6
+      tile4Walls [
+        0, 3, 0, 0
+      ]
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 3
+      id "15"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile1Walls [
+        2, 0, 0, 0
+      ]
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 3
+      zPos 1
+      id "16"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      width 12
+      height 5
+      floor TRUE
+      curve [
+        4, 0, 0, 0
+      ]
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 3
+      zPos 2
+      id "17"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      rightWall 3
+      bottomWall 6
+      width 12
+      height 5
+      floor TRUE
+      curve [
+        0, 0, 1, 0
+      ]
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 3
+      zPos 3
+      id "18"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile4Walls [
+        0, 0, 3, 0
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 3
+      zPos 4
+      id "19"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      rightWall 6
+      bottomWall 6
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      checkpoint TRUE
+      swamp TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 4
+      id "20"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile1Walls [
+        1, 0, 0, 0
+      ]
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 4
+      zPos 1
+      id "21"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile4Walls [
+        0, 1, 0, 0
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE worldTile {
+      xPos 4
+      zPos 2
+      floor TRUE
+      rightWall 3
+      width 12
+      height 5
+      id "22"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.30196078431372547 0.10196078431372549 0.6
+      room 1
+    }
+    DEF TILE halfTile {
+      xPos 4
+      zPos 3
+      id "23"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile4Walls [
+        0, 3, 0, 0
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 4
+      zPos 4
+      id "24"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 2
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 5
+      id "25"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      topWall 1
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      swamp TRUE
+      curve [
+        4, 1, 3, 2
+      ]
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 5
+      zPos 1
+      id "26"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      width 12
+      height 5
+      floor TRUE
+      curve [
+        0, 0, 1, 0
+      ]
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 5
+      zPos 2
+      id "27"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 15
+      tile4Walls [
+        0, 3, 0, 0
+      ]
+      width 12
+      height 5
+      floor TRUE
+      swamp TRUE
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 5
+      zPos 3
+      id "28"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile3Walls [
+        0, 0, 5, 0
+      ]
+      tile4Walls [
+        0, 3, 0, 0
+      ]
+      width 12
+      height 5
+      trap TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 5
+      zPos 4
+      id "29"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 1
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 6
+      id "30"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      topWall 1
+      tile4Walls [
+        0, 1, 0, 0
+      ]
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      curve [
+        0, 3, 0, 0
+      ]
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE halfTile {
+      xPos 6
+      zPos 1
+      id "31"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      rightWall 1
+      tile3Walls [
+        0, 0, 1, 0
+      ]
+      width 12
+      height 5
+      floor TRUE
+      curve [
+        0, 0, 0, 4
+      ]
+      tileColor 0.635 0.635 0.635
+      room 3
+    }
+    DEF TILE worldTile {
+      xPos 6
+      zPos 2
+      floor TRUE
+      width 12
+      height 5
+      id "32"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 6
+      zPos 3
+      floor TRUE
+      bottomWall 5
+      width 12
+      height 5
+      id "33"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 6
+      zPos 4
+      floor TRUE
+      bottomWall 1
+      bottomExternal TRUE
+      width 12
+      height 5
+      id "34"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.9058823529411765 0.6 0.10196078431372549
+      room 1
+    }
+    DEF TILE worldTile {
+      xPos 7
+      floor TRUE
+      topWall 1
+      topExternal TRUE
+      width 12
+      height 5
+      id "35"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 7
+      zPos 1
+      trap TRUE
+      width 12
+      height 5
+      id "36"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 7
+      zPos 2
+      floor TRUE
+      swamp TRUE
+      width 12
+      height 5
+      id "37"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 7
+      zPos 3
+      floor TRUE
+      width 12
+      height 5
+      id "38"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 7
+      zPos 4
+      floor TRUE
+      bottomWall 1
+      bottomExternal TRUE
+      checkpoint TRUE
+      width 12
+      height 5
+      id "39"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 8
+      floor TRUE
+      topWall 1
+      topExternal TRUE
+      width 12
+      height 5
+      id "40"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 8
+      zPos 1
+      floor TRUE
+      width 12
+      height 5
+      id "41"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 8
+      zPos 2
+      floor TRUE
+      width 12
+      height 5
+      id "42"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 8
+      zPos 3
+      floor TRUE
+      width 12
+      height 5
+      id "43"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 8
+      zPos 4
+      floor TRUE
+      bottomWall 1
+      bottomExternal TRUE
+      width 12
+      height 5
+      id "44"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE halfTile {
+      xPos 9
+      id "45"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      topWall 3
+      tile2Walls [
+        0, 6, 0, 0
+      ]
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 9
+      zPos 1
+      floor TRUE
+      width 12
+      height 5
+      id "46"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 9
+      zPos 2
+      floor TRUE
+      width 12
+      height 5
+      id "47"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 9
+      zPos 3
+      floor TRUE
+      width 12
+      height 5
+      id "48"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 9
+      zPos 4
+      bottomWall 1
+      bottomExternal TRUE
+      trap TRUE
+      width 12
+      height 5
+      id "49"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE halfTile {
+      xPos 10
+      id "50"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile1Walls [
+        0, 0, 5, 0
+      ]
+      tile2Walls [
+        0, 0, 1, 0
+      ]
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      trap TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE worldTile {
+      xPos 10
+      zPos 1
+      floor TRUE
+      width 12
+      height 5
+      id "51"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 10
+      zPos 2
+      floor TRUE
+      width 12
+      height 5
+      id "52"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 10
+      zPos 3
+      floor TRUE
+      width 12
+      height 5
+      id "53"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 10
+      zPos 4
+      floor TRUE
+      bottomWall 1
+      bottomExternal TRUE
+      width 12
+      height 5
+      id "54"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE halfTile {
+      xPos 11
+      id "55"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tile1Walls [
+        0, 0, 3, 0
+      ]
+      tile3Walls [
+        0, 2, 0, 0
+      ]
+      tile1External [
+        TRUE
+        FALSE
+        FALSE
+        FALSE
+      ]
+      tile2External [
+        TRUE
+        TRUE
+        FALSE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        TRUE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      trap TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE halfTile {
+      xPos 11
+      zPos 1
+      id "56"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      rightWall 1
+      tile1Walls [
+        0, 3, 0, 0
+      ]
+      tile2Walls [
+        0, 0, 5, 0
+      ]
+      tile2External [
+        FALSE
+        TRUE
+        FALSE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        TRUE
+        FALSE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    DEF TILE worldTile {
+      xPos 11
+      zPos 2
+      floor TRUE
+      rightWall 1
+      rightExternal TRUE
+      swamp TRUE
+      width 12
+      height 5
+      id "57"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE worldTile {
+      xPos 11
+      zPos 3
+      floor TRUE
+      rightWall 1
+      rightExternal TRUE
+      width 12
+      height 5
+      id "58"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      tileColor 0.635 0.635 0.635
+      room 4
+    }
+    DEF TILE halfTile {
+      xPos 11
+      zPos 4
+      id "59"
+      xScale 0.4
+      zScale 0.4
+      yScale 0.4
+      bottomWall 3
+      tile1Walls [
+        0, 3, 0, 0
+      ]
+      tile2Walls [
+        0, 0, 15, 0
+      ]
+      tile4Walls [
+        0, 6, 0, 0
+      ]
+      tile2External [
+        FALSE
+        TRUE
+        FALSE
+        FALSE
+      ]
+      tile3External [
+        FALSE
+        FALSE
+        TRUE
+        FALSE
+      ]
+      tile4External [
+        FALSE
+        TRUE
+        TRUE
+        FALSE
+      ]
+      width 12
+      height 5
+      floor TRUE
+      tileColor 0.635 0.635 0.635
+      room 2
+    }
+    Solid {
+      translation -0.06000000000000005 -0.03 -0.365
+      rotation 0 1 0 0
+      children [
+        Solid {
+          children [
+            DEF CURVED0 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.3888 0 0.5196
+                    0.3888 0.06 0.5196
+                    0.3816 0 0.5268
+                    0.3816 0.06 0.5268
+                    0.3912 0 0.5268
+                    0.3912 0.06 0.5268
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+                  4, 0, 1, 5, -1, 1, 3, 5, -1
+                ]
+              }
+            }
+          ]
+          name "curved0"
+          boundingObject USE CURVED0
+        }
+        Solid {
+          children [
+            DEF CURVED1 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.402 0 0.4836, 0.402 0.06 0.4836, 0.4008 0 0.486, 0.4008 0.06 0.486, 0.3984 0 0.4896, 0.3984 0.06 0.4896, 0.3972 0 0.492, 0.3972 0.06 0.492, 0.3972 0 0.4956, 0.3972 0.06 0.4956, 0.396 0 0.4992, 0.396 0.06 0.4992, 0.3948 0 0.5052, 0.3948 0.06 0.5052, 0.3936 0 0.5136, 0.3936 0.06 0.5136, 0.3948 0 0.5184, 0.3948 0.06 0.5184, 0.396 0 0.5232, 0.396 0.06 0.5232, 0.3972 0 0.5268, 0.3972 0.06 0.5268, 0.3984 0 0.5292, 0.3984 0.06 0.5292, 0.3996 0 0.5328, 0.3996 0.06 0.5328, 0.4044 0 0.5364, 0.4044 0.06 0.5364, 0.4104 0 0.5412, 0.4104 0.06 0.5412, 0.4128 0 0.5424, 0.4128 0.06 0.5424, 0.4152 0 0.5436, 0.4152 0.06 0.5436, 0.4176 0 0.5448, 0.4176 0.06 0.5448, 0.4212 0 0.5448, 0.4212 0.06 0.5448, 0.4236 0 0.546, 0.4236 0.06 0.546, 0.426 0 0.5472, 0.426 0.06 0.5472, 0.4284 0 0.5484, 0.4284 0.06 0.5484, 0.4308 0 0.5496, 0.4308 0.06 0.5496, 0.4344 0 0.5508, 0.4344 0.06 0.5508, 0.4344 0 0.5484, 0.4344 0.06 0.5484, 0.432 0 0.5472, 0.432 0.06 0.5472, 0.4272 0 0.5436, 0.4272 0.06 0.5436, 0.4248 0 0.5424, 0.4248 0.06 0.5424, 0.4164 0 0.5352, 0.4164 0.06 0.5352, 0.414 0 0.5328, 0.414 0.06 0.5328, 0.4116 0 0.5292, 0.4116 0.06 0.5292, 0.408 0 0.5244, 0.408 0.06 0.5244, 0.4068 0 0.522, 0.4068 0.06 0.522, 0.4056 0 0.5196, 0.4056 0.06 0.5196, 0.4044 0 0.5172, 0.4044 0.06 0.5172, 0.4032 0 0.5148, 0.4032 0.06 0.5148, 0.4032 0 0.5124, 0.4032 0.06 0.5124, 0.402 0 0.5052, 0.402 0.06 0.5052
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 0, 1, 75, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, -1
+                ]
+              }
+            }
+          ]
+          name "curved1"
+          boundingObject USE CURVED1
+        }
+        Solid {
+          children [
+            DEF CURVED2 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4176 0 0.4656, 0.4176 0.06 0.4656, 0.4152 0 0.468, 0.4152 0.06 0.468, 0.414 0 0.4704, 0.414 0.06 0.4704, 0.4104 0 0.4728, 0.4104 0.06 0.4728, 0.4092 0 0.4752, 0.4092 0.06 0.4752, 0.4092 0 0.48, 0.4092 0.06 0.48, 0.408 0 0.4836, 0.408 0.06 0.4836, 0.4068 0 0.5052, 0.4068 0.06 0.5052, 0.408 0 0.51, 0.408 0.06 0.51, 0.4092 0 0.5136, 0.4092 0.06 0.5136, 0.4104 0 0.5172, 0.4104 0.06 0.5172, 0.4128 0 0.5196, 0.4128 0.06 0.5196, 0.414 0 0.522, 0.414 0.06 0.522, 0.4152 0 0.5244, 0.4152 0.06 0.5244, 0.4212 0 0.5316, 0.4212 0.06 0.5316, 0.4248 0 0.5364, 0.4248 0.06 0.5364, 0.4272 0 0.5376, 0.4272 0.06 0.5376, 0.4308 0 0.5412, 0.4308 0.06 0.5412, 0.4344 0 0.5436, 0.4344 0.06 0.5436, 0.4368 0 0.5448, 0.4368 0.06 0.5448, 0.4392 0 0.546, 0.4392 0.06 0.546, 0.4416 0 0.546, 0.4416 0.06 0.546, 0.444 0 0.5472, 0.444 0.06 0.5472, 0.4464 0 0.5484, 0.4464 0.06 0.5484, 0.456 0 0.5496, 0.456 0.06 0.5496, 0.462 0 0.5484, 0.462 0.06 0.5484, 0.468 0 0.5472, 0.468 0.06 0.5472, 0.4692 0 0.5448, 0.4692 0.06 0.5448, 0.4668 0 0.5436, 0.4668 0.06 0.5436, 0.4644 0 0.5424, 0.4644 0.06 0.5424, 0.462 0 0.5424, 0.462 0.06 0.5424, 0.4596 0 0.5412, 0.4596 0.06 0.5412, 0.4572 0 0.54, 0.4572 0.06 0.54, 0.4548 0 0.5376, 0.4548 0.06 0.5376, 0.4524 0 0.5376, 0.4524 0.06 0.5376, 0.45 0 0.5352, 0.45 0.06 0.5352, 0.4488 0 0.5328, 0.4488 0.06 0.5328, 0.444 0 0.5292, 0.444 0.06 0.5292, 0.438 0 0.5232, 0.438 0.06 0.5232, 0.4368 0 0.5208, 0.4368 0.06 0.5208, 0.4344 0 0.5184, 0.4344 0.06 0.5184, 0.4332 0 0.516, 0.4332 0.06 0.516, 0.432 0 0.5136, 0.432 0.06 0.5136, 0.432 0 0.5112, 0.432 0.06 0.5112, 0.4296 0 0.5088, 0.4296 0.06 0.5088, 0.4296 0 0.5064, 0.4296 0.06 0.5064, 0.4284 0 0.504, 0.4284 0.06 0.504, 0.4272 0 0.5004, 0.4272 0.06 0.5004, 0.426 0 0.474, 0.426 0.06 0.474, 0.4272 0 0.4704, 0.4272 0.06 0.4704, 0.4284 0 0.468, 0.4284 0.06 0.468, 0.426 0 0.4668, 0.426 0.06 0.4668, 0.4236 0 0.4656, 0.4236 0.06 0.4656
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 100, 101, 99, -1, 100, 102, 103, 101, -1, 102, 104, 105, 103, -1, 104, 0, 1, 105, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, -1
+                ]
+              }
+            }
+          ]
+          name "curved2"
+          boundingObject USE CURVED2
+        }
+        Solid {
+          children [
+            DEF CURVED3 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4656 0 0.444, 0.4656 0.06 0.444, 0.4608 0 0.4452, 0.4608 0.06 0.4452, 0.4572 0 0.4464, 0.4572 0.06 0.4464, 0.4512 0 0.4476, 0.4512 0.06 0.4476, 0.4488 0 0.4488, 0.4488 0.06 0.4488, 0.45 0 0.4524, 0.45 0.06 0.4524, 0.4512 0 0.456, 0.4512 0.06 0.456, 0.45 0 0.4596, 0.45 0.06 0.4596, 0.4488 0 0.462, 0.4488 0.06 0.462, 0.4476 0 0.4644, 0.4476 0.06 0.4644, 0.4452 0 0.4656, 0.4452 0.06 0.4656, 0.444 0 0.468, 0.444 0.06 0.468, 0.4416 0 0.4692, 0.4416 0.06 0.4692, 0.4344 0 0.4692, 0.4344 0.06 0.4692, 0.4332 0 0.4764, 0.4332 0.06 0.4764, 0.432 0 0.498, 0.432 0.06 0.498, 0.4332 0 0.5028, 0.4332 0.06 0.5028, 0.4344 0 0.5052, 0.4344 0.06 0.5052, 0.4356 0 0.5076, 0.4356 0.06 0.5076, 0.4368 0 0.51, 0.4368 0.06 0.51, 0.438 0 0.5124, 0.438 0.06 0.5124, 0.4392 0 0.5148, 0.4392 0.06 0.5148, 0.4404 0 0.5172, 0.4404 0.06 0.5172, 0.444 0 0.5208, 0.444 0.06 0.5208, 0.4488 0 0.5268, 0.4488 0.06 0.5268, 0.4512 0 0.528, 0.4512 0.06 0.528, 0.4524 0 0.5304, 0.4524 0.06 0.5304, 0.4548 0 0.5316, 0.4548 0.06 0.5316, 0.4596 0 0.5352, 0.4596 0.06 0.5352, 0.462 0 0.5364, 0.462 0.06 0.5364, 0.4644 0 0.5376, 0.4644 0.06 0.5376, 0.4668 0 0.5376, 0.4668 0.06 0.5376, 0.4692 0 0.5388, 0.4692 0.06 0.5388, 0.4728 0 0.54, 0.4728 0.06 0.54, 0.4848 0 0.5412, 0.4848 0.06 0.5412, 0.4872 0 0.54, 0.4872 0.06 0.54, 0.4908 0 0.5388, 0.4908 0.06 0.5388, 0.4932 0 0.5376, 0.4932 0.06 0.5376, 0.4956 0 0.5352, 0.4956 0.06 0.5352, 0.498 0 0.534, 0.498 0.06 0.534, 0.5004 0 0.534, 0.5004 0.06 0.534, 0.5052 0 0.5292, 0.5052 0.06 0.5292, 0.5064 0 0.5268, 0.5064 0.06 0.5268, 0.504 0 0.5268, 0.504 0.06 0.5268, 0.4884 0 0.5268, 0.4884 0.06 0.5268, 0.4848 0 0.5256, 0.4848 0.06 0.5256, 0.48 0 0.5244, 0.48 0.06 0.5244, 0.4776 0 0.5232, 0.4776 0.06 0.5232, 0.4752 0 0.5208, 0.4752 0.06 0.5208, 0.4728 0 0.5196, 0.4728 0.06 0.5196, 0.4668 0 0.5148, 0.4668 0.06 0.5148, 0.4632 0 0.5124, 0.4632 0.06 0.5124, 0.462 0 0.51, 0.462 0.06 0.51, 0.4584 0 0.5076, 0.4584 0.06 0.5076, 0.456 0 0.5052, 0.456 0.06 0.5052, 0.456 0 0.5016, 0.456 0.06 0.5016, 0.4536 0 0.4992, 0.4536 0.06 0.4992, 0.4536 0 0.4968, 0.4536 0.06 0.4968, 0.4524 0 0.4944, 0.4524 0.06 0.4944, 0.4512 0 0.492, 0.4512 0.06 0.492, 0.45 0 0.4704, 0.45 0.06 0.4704, 0.4512 0 0.468, 0.4512 0.06 0.468, 0.4524 0 0.4656, 0.4524 0.06 0.4656, 0.4536 0 0.4632, 0.4536 0.06 0.4632, 0.4548 0 0.4596, 0.4548 0.06 0.4596, 0.456 0 0.4572, 0.456 0.06 0.4572, 0.4572 0 0.4548, 0.4572 0.06 0.4548, 0.4632 0 0.4488, 0.4632 0.06 0.4488, 0.4644 0 0.4464, 0.4644 0.06 0.4464, 0.468 0 0.444, 0.468 0.06 0.444
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 100, 101, 99, -1, 100, 102, 103, 101, -1, 102, 104, 105, 103, -1, 104, 106, 107, 105, -1, 106, 108, 109, 107, -1, 108, 110, 111, 109, -1, 110, 112, 113, 111, -1, 112, 114, 115, 113, -1, 114, 116, 117, 115, -1, 116, 118, 119, 117, -1, 118, 120, 121, 119, -1, 120, 122, 123, 121, -1, 122, 124, 125, 123, -1, 124, 126, 127, 125, -1, 126, 128, 129, 127, -1, 128, 130, 131, 129, -1, 130, 132, 133, 131, -1, 132, 134, 135, 133, -1, 134, 136, 137, 135, -1, 136, 138, 139, 137, -1, 138, 0, 1, 139, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, -1
+                ]
+              }
+            }
+          ]
+          name "curved3"
+          boundingObject USE CURVED3
+        }
+        Solid {
+          children [
+            DEF CURVED4 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4812 0 0.4428, 0.4812 0.06 0.4428, 0.4776 0 0.444, 0.4776 0.06 0.444, 0.4752 0 0.4464, 0.4752 0.06 0.4464, 0.4728 0 0.4476, 0.4728 0.06 0.4476, 0.4632 0 0.456, 0.4632 0.06 0.456, 0.4596 0 0.4608, 0.4596 0.06 0.4608, 0.4572 0 0.4644, 0.4572 0.06 0.4644, 0.4572 0 0.4668, 0.4572 0.06 0.4668, 0.456 0 0.4872, 0.456 0.06 0.4872, 0.4572 0 0.4956, 0.4572 0.06 0.4956, 0.4596 0 0.498, 0.4596 0.06 0.498, 0.4632 0 0.5028, 0.4632 0.06 0.5028, 0.4656 0 0.5064, 0.4656 0.06 0.5064, 0.4668 0 0.5088, 0.4668 0.06 0.5088, 0.4704 0 0.5112, 0.4704 0.06 0.5112, 0.4728 0 0.5136, 0.4728 0.06 0.5136, 0.4764 0 0.516, 0.4764 0.06 0.516, 0.4788 0 0.5172, 0.4788 0.06 0.5172, 0.4812 0 0.5184, 0.4812 0.06 0.5184, 0.4836 0 0.5184, 0.4836 0.06 0.5184, 0.4872 0 0.5196, 0.4872 0.06 0.5196, 0.4932 0 0.5208, 0.4932 0.06 0.5208, 0.5052 0 0.522, 0.5052 0.06 0.522, 0.5112 0 0.5208, 0.5112 0.06 0.5208, 0.5136 0 0.5196, 0.5136 0.06 0.5196, 0.5172 0 0.5184, 0.5172 0.06 0.5184, 0.5172 0 0.516, 0.5172 0.06 0.516, 0.5196 0 0.5148, 0.5196 0.06 0.5148, 0.522 0 0.5124, 0.522 0.06 0.5124, 0.5232 0 0.51, 0.5232 0.06 0.51, 0.5244 0 0.5076, 0.5244 0.06 0.5076, 0.5256 0 0.5052, 0.5256 0.06 0.5052, 0.5268 0 0.5028, 0.5268 0.06 0.5028, 0.528 0 0.5004, 0.528 0.06 0.5004, 0.5292 0 0.498, 0.5292 0.06 0.498, 0.5292 0 0.4944, 0.5292 0.06 0.4944, 0.5304 0 0.4896, 0.5304 0.06 0.4896, 0.5316 0 0.4776, 0.5316 0.06 0.4776, 0.5304 0 0.4716, 0.5304 0.06 0.4716, 0.5292 0 0.468, 0.5292 0.06 0.468, 0.528 0 0.4656, 0.528 0.06 0.4656, 0.5244 0 0.462, 0.5244 0.06 0.462, 0.5208 0 0.4572, 0.5208 0.06 0.4572, 0.5172 0 0.4548, 0.5172 0.06 0.4548, 0.516 0 0.4524, 0.516 0.06 0.4524, 0.5136 0 0.4524, 0.5136 0.06 0.4524, 0.5112 0 0.45, 0.5112 0.06 0.45, 0.5088 0 0.4488, 0.5088 0.06 0.4488, 0.5064 0 0.4476, 0.5064 0.06 0.4476, 0.5028 0 0.4476, 0.5028 0.06 0.4476, 0.5004 0 0.4464, 0.5004 0.06 0.4464, 0.4944 0 0.4452, 0.4944 0.06 0.4452, 0.4884 0 0.444, 0.4884 0.06 0.444
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 100, 101, 99, -1, 100, 102, 103, 101, -1, 102, 104, 105, 103, -1, 104, 0, 1, 105, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, -1
+                ]
+              }
+            }
+          ]
+          name "curved4"
+          boundingObject USE CURVED4
+        }
+        Solid {
+          children [
+            DEF CURVED5 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.5376 0 0.4068, 0.5376 0.06 0.4068, 0.534 0 0.4104, 0.534 0.06 0.4104, 0.5316 0 0.4116, 0.5316 0.06 0.4116, 0.5256 0 0.4164, 0.5256 0.06 0.4164, 0.5244 0 0.4188, 0.5244 0.06 0.4188, 0.522 0 0.4212, 0.522 0.06 0.4212, 0.5184 0 0.4248, 0.5184 0.06 0.4248, 0.5184 0 0.4272, 0.5184 0.06 0.4272, 0.516 0 0.4296, 0.516 0.06 0.4296, 0.5148 0 0.432, 0.5148 0.06 0.432, 0.5124 0 0.4356, 0.5124 0.06 0.4356, 0.5124 0 0.4392, 0.5124 0.06 0.4392, 0.5112 0 0.4416, 0.5112 0.06 0.4416, 0.5112 0 0.444, 0.5112 0.06 0.444, 0.5148 0 0.438, 0.5148 0.06 0.438, 0.516 0 0.4356, 0.516 0.06 0.4356, 0.5172 0 0.4332, 0.5172 0.06 0.4332, 0.5232 0 0.4236, 0.5232 0.06 0.4236, 0.534 0 0.4128, 0.534 0.06 0.4128, 0.5364 0 0.4104, 0.5364 0.06 0.4104, 0.5388 0 0.4092, 0.5388 0.06 0.4092, 0.5412 0 0.4092, 0.5412 0.06 0.4092, 0.5472 0 0.408, 0.5472 0.06 0.408, 0.5496 0 0.4092, 0.5496 0.06 0.4092, 0.552 0 0.4104, 0.552 0.06 0.4104, 0.5544 0 0.4128, 0.5544 0.06 0.4128, 0.5568 0 0.4164, 0.5568 0.06 0.4164, 0.5568 0 0.42, 0.5568 0.06 0.42, 0.5568 0 0.4224, 0.5568 0.06 0.4224, 0.5568 0 0.4248, 0.5568 0.06 0.4248, 0.5544 0 0.4272, 0.5544 0.06 0.4272, 0.5532 0 0.4296, 0.5532 0.06 0.4296, 0.5508 0 0.4308, 0.5508 0.06 0.4308, 0.5424 0 0.4308, 0.5424 0.06 0.4308, 0.5388 0 0.4272, 0.5388 0.06 0.4272, 0.5376 0 0.4248, 0.5376 0.06 0.4248, 0.5376 0 0.4212, 0.5376 0.06 0.4212, 0.54 0 0.42, 0.54 0.06 0.42, 0.5412 0 0.4176, 0.5412 0.06 0.4176, 0.5424 0 0.42, 0.5424 0.06 0.42, 0.5448 0 0.4212, 0.5448 0.06 0.4212, 0.5472 0 0.42, 0.5472 0.06 0.42, 0.5484 0 0.4164, 0.5484 0.06 0.4164, 0.546 0 0.4152, 0.546 0.06 0.4152, 0.5424 0 0.4152, 0.5424 0.06 0.4152, 0.5388 0 0.4164, 0.5388 0.06 0.4164, 0.5364 0 0.4188, 0.5364 0.06 0.4188, 0.5364 0 0.4284, 0.5364 0.06 0.4284, 0.54 0 0.432, 0.54 0.06 0.432, 0.5424 0 0.4332, 0.5424 0.06 0.4332, 0.552 0 0.4332, 0.552 0.06 0.4332, 0.5568 0 0.4284, 0.5568 0.06 0.4284, 0.5592 0 0.426, 0.5592 0.06 0.426, 0.5592 0 0.4164, 0.5592 0.06 0.4164, 0.558 0 0.414, 0.558 0.06 0.414, 0.5568 0 0.4116, 0.5568 0.06 0.4116, 0.5532 0 0.408, 0.5532 0.06 0.408, 0.5508 0 0.4068, 0.5508 0.06 0.4068
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 100, 101, 99, -1, 100, 102, 103, 101, -1, 102, 104, 105, 103, -1, 104, 106, 107, 105, -1, 106, 108, 109, 107, -1, 108, 110, 111, 109, -1, 110, 112, 113, 111, -1, 112, 114, 115, 113, -1, 114, 0, 1, 115, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, -1
+                ]
+              }
+            }
+          ]
+          name "curved5"
+          boundingObject USE CURVED5
+        }
+        Solid {
+          children [
+            DEF CURVED6 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.3792 0 0.3984, 0.3792 0.06 0.3984, 0.3768 0 0.3996, 0.3768 0.06 0.3996, 0.3744 0 0.4008, 0.3744 0.06 0.4008, 0.3684 0 0.4068, 0.3684 0.06 0.4068, 0.3684 0 0.4092, 0.3684 0.06 0.4092, 0.3672 0 0.4224, 0.3672 0.06 0.4224, 0.3684 0 0.4248, 0.3684 0.06 0.4248, 0.3696 0 0.4272, 0.3696 0.06 0.4272, 0.372 0 0.4296, 0.372 0.06 0.4296, 0.3732 0 0.432, 0.3732 0.06 0.432, 0.3816 0 0.4416, 0.3816 0.06 0.4416, 0.3852 0 0.444, 0.3852 0.06 0.444, 0.3876 0 0.4464, 0.3876 0.06 0.4464, 0.3924 0 0.45, 0.3924 0.06 0.45, 0.3948 0 0.4512, 0.3948 0.06 0.4512, 0.3972 0 0.4512, 0.3972 0.06 0.4512, 0.3996 0 0.4524, 0.3996 0.06 0.4524, 0.402 0 0.4536, 0.402 0.06 0.4536, 0.4044 0 0.4548, 0.4044 0.06 0.4548, 0.4092 0 0.456, 0.4092 0.06 0.456, 0.4128 0 0.4572, 0.4128 0.06 0.4572, 0.4164 0 0.4584, 0.4164 0.06 0.4584, 0.42 0 0.4596, 0.42 0.06 0.4596, 0.426 0 0.4608, 0.426 0.06 0.4608, 0.432 0 0.462, 0.432 0.06 0.462, 0.4356 0 0.4632, 0.4356 0.06 0.4632, 0.4392 0 0.4644, 0.4392 0.06 0.4644, 0.4452 0 0.4584, 0.4452 0.06 0.4584, 0.4452 0 0.456, 0.4452 0.06 0.456, 0.444 0 0.45, 0.444 0.06 0.45, 0.4428 0 0.4476, 0.4428 0.06 0.4476, 0.4416 0 0.444, 0.4416 0.06 0.444, 0.4404 0 0.4404, 0.4404 0.06 0.4404, 0.4392 0 0.438, 0.4392 0.06 0.438, 0.438 0 0.4344, 0.438 0.06 0.4344, 0.4356 0 0.432, 0.4356 0.06 0.432, 0.4332 0 0.4284, 0.4332 0.06 0.4284, 0.432 0 0.426, 0.432 0.06 0.426, 0.4308 0 0.4236, 0.4308 0.06 0.4236, 0.4296 0 0.4212, 0.4296 0.06 0.4212, 0.426 0 0.4188, 0.426 0.06 0.4188, 0.426 0 0.4164, 0.426 0.06 0.4164, 0.4176 0 0.4092, 0.4176 0.06 0.4092, 0.414 0 0.4068, 0.414 0.06 0.4068, 0.4104 0 0.4044, 0.4104 0.06 0.4044, 0.408 0 0.4032, 0.408 0.06 0.4032, 0.4056 0 0.4032, 0.4056 0.06 0.4032, 0.4032 0 0.402, 0.4032 0.06 0.402, 0.4008 0 0.4008, 0.4008 0.06 0.4008, 0.3984 0 0.3996, 0.3984 0.06 0.3996
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 0, 1, 99, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, -1
+                ]
+              }
+            }
+          ]
+          name "curved6"
+          boundingObject USE CURVED6
+        }
+        Solid {
+          children [
+            DEF CURVED7 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.5004 0 0.3888, 0.5004 0.06 0.3888, 0.498 0 0.39, 0.498 0.06 0.39, 0.4944 0 0.3936, 0.4944 0.06 0.3936, 0.4908 0 0.3984, 0.4908 0.06 0.3984, 0.4896 0 0.4008, 0.4896 0.06 0.4008, 0.4884 0 0.4032, 0.4884 0.06 0.4032, 0.4884 0 0.4104, 0.4884 0.06 0.4104, 0.4872 0 0.432, 0.4872 0.06 0.432, 0.4884 0 0.438, 0.4884 0.06 0.438, 0.4896 0 0.432, 0.4896 0.06 0.432, 0.4896 0 0.4068, 0.4896 0.06 0.4068, 0.4908 0 0.4044, 0.4908 0.06 0.4044, 0.4932 0 0.402, 0.4932 0.06 0.402, 0.4932 0 0.3984, 0.4932 0.06 0.3984, 0.5004 0 0.3912, 0.5004 0.06 0.3912, 0.5028 0 0.39, 0.5028 0.06 0.39, 0.5076 0 0.39, 0.5076 0.06 0.39, 0.5112 0 0.3912, 0.5112 0.06 0.3912, 0.5136 0 0.3924, 0.5136 0.06 0.3924, 0.5184 0 0.3972, 0.5184 0.06 0.3972, 0.5184 0 0.4068, 0.5184 0.06 0.4068, 0.5136 0 0.4116, 0.5136 0.06 0.4116, 0.5052 0 0.4116, 0.5052 0.06 0.4116, 0.5016 0 0.408, 0.5016 0.06 0.408, 0.5004 0 0.4056, 0.5004 0.06 0.4056, 0.5028 0 0.402, 0.5028 0.06 0.402, 0.5088 0 0.402, 0.5088 0.06 0.402, 0.5088 0 0.3984, 0.5088 0.06 0.3984, 0.5064 0 0.3972, 0.5064 0.06 0.3972, 0.504 0 0.3984, 0.504 0.06 0.3984, 0.5016 0 0.3984, 0.5016 0.06 0.3984, 0.5004 0 0.402, 0.5004 0.06 0.402, 0.5004 0 0.4104, 0.5004 0.06 0.4104, 0.5028 0 0.4116, 0.5028 0.06 0.4116, 0.5052 0 0.414, 0.5052 0.06 0.414, 0.5136 0 0.414, 0.5136 0.06 0.414, 0.516 0 0.4128, 0.516 0.06 0.4128, 0.5196 0 0.4092, 0.5196 0.06 0.4092, 0.5208 0 0.4068, 0.5208 0.06 0.4068, 0.5208 0 0.3984, 0.5208 0.06 0.3984, 0.5184 0 0.3948, 0.5184 0.06 0.3948, 0.516 0 0.3912, 0.516 0.06 0.3912, 0.5136 0 0.39, 0.5136 0.06 0.39, 0.5112 0 0.3888, 0.5112 0.06 0.3888
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 0, 1, 87, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, -1
+                ]
+              }
+            }
+          ]
+          name "curved7"
+          boundingObject USE CURVED7
+        }
+        Solid {
+          children [
+            DEF CURVED8 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4212 0 0.3804, 0.4212 0.06 0.3804, 0.4188 0 0.3816, 0.4188 0.06 0.3816, 0.4152 0 0.3852, 0.4152 0.06 0.3852, 0.4152 0 0.3876, 0.4152 0.06 0.3876, 0.4128 0 0.39, 0.4128 0.06 0.39, 0.4116 0 0.3924, 0.4116 0.06 0.3924, 0.4116 0 0.3984, 0.4116 0.06 0.3984, 0.4152 0 0.402, 0.4152 0.06 0.402, 0.4176 0 0.4032, 0.4176 0.06 0.4032, 0.4188 0 0.4056, 0.4188 0.06 0.4056, 0.4212 0 0.4068, 0.4212 0.06 0.4068, 0.4236 0 0.408, 0.4236 0.06 0.408, 0.426 0 0.4092, 0.426 0.06 0.4092, 0.4332 0 0.4176, 0.4332 0.06 0.4176, 0.4368 0 0.4224, 0.4368 0.06 0.4224, 0.4392 0 0.426, 0.4392 0.06 0.426, 0.4416 0 0.4296, 0.4416 0.06 0.4296, 0.4428 0 0.432, 0.4428 0.06 0.432, 0.444 0 0.4344, 0.444 0.06 0.4344, 0.444 0 0.4368, 0.444 0.06 0.4368, 0.4452 0 0.4404, 0.4452 0.06 0.4404, 0.4476 0 0.4428, 0.4476 0.06 0.4428, 0.45 0 0.4416, 0.45 0.06 0.4416, 0.456 0 0.4416, 0.456 0.06 0.4416, 0.4596 0 0.4404, 0.4596 0.06 0.4404, 0.4632 0 0.4392, 0.4632 0.06 0.4392, 0.4632 0 0.4308, 0.4632 0.06 0.4308, 0.4644 0 0.4224, 0.4644 0.06 0.4224, 0.4632 0 0.4164, 0.4632 0.06 0.4164, 0.462 0 0.4128, 0.462 0.06 0.4128, 0.4608 0 0.4104, 0.4608 0.06 0.4104, 0.4596 0 0.4068, 0.4596 0.06 0.4068, 0.4584 0 0.4044, 0.4584 0.06 0.4044, 0.456 0 0.402, 0.456 0.06 0.402, 0.456 0 0.3984, 0.456 0.06 0.3984, 0.4524 0 0.3948, 0.4524 0.06 0.3948, 0.45 0 0.3924, 0.45 0.06 0.3924, 0.4488 0 0.39, 0.4488 0.06 0.39, 0.444 0 0.3852, 0.444 0.06 0.3852, 0.4416 0 0.384, 0.4416 0.06 0.384, 0.438 0 0.3816, 0.438 0.06 0.3816, 0.4356 0 0.3804, 0.4356 0.06 0.3804
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 0, 1, 83, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, -1
+                ]
+              }
+            }
+          ]
+          name "curved8"
+          boundingObject USE CURVED8
+        }
+        Solid {
+          children [
+            DEF CURVED9 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.1848 0 0.3132, 0.1848 0.06 0.3132, 0.1824 0 0.3168, 0.1824 0.06 0.3168, 0.1812 0 0.3192, 0.1812 0.06 0.3192, 0.18 0 0.3216, 0.18 0.06 0.3216, 0.1788 0 0.324, 0.1788 0.06 0.324, 0.1788 0 0.3264, 0.1788 0.06 0.3264, 0.1764 0 0.3288, 0.1764 0.06 0.3288, 0.1764 0 0.3312, 0.1764 0.06 0.3312, 0.1752 0 0.3348, 0.1752 0.06 0.3348, 0.174 0 0.3396, 0.174 0.06 0.3396, 0.1728 0 0.3528, 0.1728 0.06 0.3528, 0.174 0 0.3576, 0.174 0.06 0.3576, 0.1752 0 0.3612, 0.1752 0.06 0.3612, 0.1728 0 0.3612, 0.1728 0.06 0.3612, 0.1716 0 0.3588, 0.1716 0.06 0.3588, 0.1704 0 0.3564, 0.1704 0.06 0.3564, 0.1608 0 0.3456, 0.1608 0.06 0.3456, 0.1572 0 0.3432, 0.1572 0.06 0.3432, 0.1548 0 0.342, 0.1548 0.06 0.342, 0.1524 0 0.342, 0.1524 0.06 0.342, 0.15 0 0.3408, 0.15 0.06 0.3408, 0.1476 0 0.3396, 0.1476 0.06 0.3396, 0.1428 0 0.3384, 0.1428 0.06 0.3384, 0.1392 0 0.3372, 0.1392 0.06 0.3372, 0.1356 0 0.336, 0.1356 0.06 0.336, 0.132 0 0.3348, 0.132 0.06 0.3348, 0.132 0 0.3372, 0.132 0.06 0.3372, 0.1332 0 0.3408, 0.1332 0.06 0.3408, 0.1344 0 0.3444, 0.1344 0.06 0.3444, 0.1356 0 0.348, 0.1356 0.06 0.348, 0.1368 0 0.3504, 0.1368 0.06 0.3504, 0.138 0 0.354, 0.138 0.06 0.354, 0.1392 0 0.3564, 0.1392 0.06 0.3564, 0.1404 0 0.3588, 0.1404 0.06 0.3588, 0.1416 0 0.3612, 0.1416 0.06 0.3612, 0.1452 0 0.3648, 0.1452 0.06 0.3648, 0.1476 0 0.3684, 0.1476 0.06 0.3684, 0.1536 0 0.3732, 0.1536 0.06 0.3732, 0.156 0 0.3732, 0.156 0.06 0.3732, 0.1584 0 0.3756, 0.1584 0.06 0.3756, 0.1608 0 0.3768, 0.1608 0.06 0.3768, 0.1572 0 0.378, 0.1572 0.06 0.378, 0.1536 0 0.3768, 0.1536 0.06 0.3768, 0.1368 0 0.3756, 0.1368 0.06 0.3756, 0.1332 0 0.3768, 0.1332 0.06 0.3768, 0.1308 0 0.378, 0.1308 0.06 0.378, 0.1284 0 0.3792, 0.1284 0.06 0.3792, 0.1248 0 0.3804, 0.1248 0.06 0.3804, 0.1224 0 0.3816, 0.1224 0.06 0.3816, 0.1176 0 0.3828, 0.1176 0.06 0.3828, 0.1152 0 0.3852, 0.1152 0.06 0.3852, 0.1128 0 0.3852, 0.1128 0.06 0.3852, 0.1104 0 0.3876, 0.1104 0.06 0.3876, 0.1128 0 0.39, 0.1128 0.06 0.39, 0.1152 0 0.39, 0.1152 0.06 0.39, 0.1176 0 0.3924, 0.1176 0.06 0.3924, 0.12 0 0.3936, 0.12 0.06 0.3936, 0.1224 0 0.3936, 0.1224 0.06 0.3936, 0.1248 0 0.3948, 0.1248 0.06 0.3948, 0.1272 0 0.396, 0.1272 0.06 0.396, 0.1308 0 0.3972, 0.1308 0.06 0.3972, 0.1344 0 0.3984, 0.1344 0.06 0.3984, 0.1524 0 0.3996, 0.1524 0.06 0.3996, 0.156 0 0.3984, 0.156 0.06 0.3984, 0.1596 0 0.3972, 0.1596 0.06 0.3972, 0.1596 0 0.3996, 0.1596 0.06 0.3996, 0.156 0 0.402, 0.156 0.06 0.402, 0.1536 0 0.402, 0.1536 0.06 0.402, 0.1476 0 0.408, 0.1476 0.06 0.408, 0.1452 0 0.4092, 0.1452 0.06 0.4092, 0.1416 0 0.414, 0.1416 0.06 0.414, 0.1404 0 0.4164, 0.1404 0.06 0.4164, 0.1392 0 0.4188, 0.1392 0.06 0.4188, 0.138 0 0.4212, 0.138 0.06 0.4212, 0.138 0 0.4236, 0.138 0.06 0.4236, 0.1368 0 0.426, 0.1368 0.06 0.426, 0.1356 0 0.4296, 0.1356 0.06 0.4296, 0.1344 0 0.4332, 0.1344 0.06 0.4332, 0.1332 0 0.4368, 0.1332 0.06 0.4368, 0.132 0 0.4404, 0.132 0.06 0.4404, 0.1344 0 0.4404, 0.1344 0.06 0.4404, 0.138 0 0.4392, 0.138 0.06 0.4392, 0.1416 0 0.438, 0.1416 0.06 0.438, 0.1464 0 0.4368, 0.1464 0.06 0.4368, 0.1488 0 0.4356, 0.1488 0.06 0.4356, 0.1512 0 0.4344, 0.1512 0.06 0.4344, 0.1548 0 0.4332, 0.1548 0.06 0.4332, 0.1572 0 0.432, 0.1572 0.06 0.432, 0.1596 0 0.4296, 0.1596 0.06 0.4296, 0.1704 0 0.42, 0.1704 0.06 0.42, 0.1716 0 0.4176, 0.1716 0.06 0.4176, 0.1728 0 0.4152, 0.1728 0.06 0.4152, 0.174 0 0.4128, 0.174 0.06 0.4128, 0.1752 0 0.4164, 0.1752 0.06 0.4164, 0.174 0 0.4212, 0.174 0.06 0.4212, 0.1728 0 0.4344, 0.1728 0.06 0.4344, 0.174 0 0.4392, 0.174 0.06 0.4392, 0.1752 0 0.4428, 0.1752 0.06 0.4428, 0.1764 0 0.4464, 0.1764 0.06 0.4464, 0.1788 0 0.4488, 0.1788 0.06 0.4488, 0.1788 0 0.4512, 0.1788 0.06 0.4512, 0.18 0 0.4536, 0.18 0.06 0.4536, 0.1812 0 0.456, 0.1812 0.06 0.456, 0.1824 0 0.4584, 0.1824 0.06 0.4584, 0.1848 0 0.4608, 0.1848 0.06 0.4608, 0.1884 0 0.4584, 0.1884 0.06 0.4584, 0.1896 0 0.456, 0.1896 0.06 0.456, 0.1908 0 0.4536, 0.1908 0.06 0.4536, 0.192 0 0.4512, 0.192 0.06 0.4512, 0.192 0 0.4488, 0.192 0.06 0.4488, 0.1932 0 0.4464, 0.1932 0.06 0.4464, 0.1944 0 0.444, 0.1944 0.06 0.444, 0.1956 0 0.4404, 0.1956 0.06 0.4404, 0.1968 0 0.4356, 0.1968 0.06 0.4356, 0.198 0 0.4236, 0.198 0.06 0.4236, 0.1968 0 0.4176, 0.1968 0.06 0.4176, 0.1956 0 0.414, 0.1956 0.06 0.414, 0.198 0 0.414, 0.198 0.06 0.414, 0.1992 0 0.4164, 0.1992 0.06 0.4164, 0.2004 0 0.4188, 0.2004 0.06 0.4188, 0.21 0 0.4296, 0.21 0.06 0.4296, 0.2136 0 0.432, 0.2136 0.06 0.432, 0.216 0 0.4332, 0.216 0.06 0.4332, 0.2184 0 0.4332, 0.2184 0.06 0.4332, 0.2208 0 0.4344, 0.2208 0.06 0.4344, 0.2232 0 0.4356, 0.2232 0.06 0.4356, 0.228 0 0.4368, 0.228 0.06 0.4368, 0.2316 0 0.438, 0.2316 0.06 0.438, 0.2352 0 0.4392, 0.2352 0.06 0.4392, 0.2388 0 0.4404, 0.2388 0.06 0.4404, 0.2388 0 0.438, 0.2388 0.06 0.438, 0.2376 0 0.4344, 0.2376 0.06 0.4344, 0.2364 0 0.4308, 0.2364 0.06 0.4308, 0.2352 0 0.4272, 0.2352 0.06 0.4272, 0.234 0 0.4248, 0.234 0.06 0.4248, 0.2328 0 0.4212, 0.2328 0.06 0.4212, 0.2316 0 0.4188, 0.2316 0.06 0.4188, 0.2304 0 0.4164, 0.2304 0.06 0.4164, 0.2292 0 0.414, 0.2292 0.06 0.414, 0.2256 0 0.4104, 0.2256 0.06 0.4104, 0.2244 0 0.408, 0.2244 0.06 0.408, 0.2172 0 0.402, 0.2172 0.06 0.402, 0.2148 0 0.402, 0.2148 0.06 0.402, 0.2124 0 0.3996, 0.2124 0.06 0.3996, 0.21 0 0.3984, 0.21 0.06 0.3984, 0.2136 0 0.3972, 0.2136 0.06 0.3972, 0.2172 0 0.3984, 0.2172 0.06 0.3984, 0.2352 0 0.3996, 0.2352 0.06 0.3996, 0.2388 0 0.3984, 0.2388 0.06 0.3984, 0.2424 0 0.3972, 0.2424 0.06 0.3972, 0.2448 0 0.396, 0.2448 0.06 0.396, 0.2472 0 0.3948, 0.2472 0.06 0.3948, 0.2508 0 0.3936, 0.2508 0.06 0.3936, 0.2532 0 0.3924, 0.2532 0.06 0.3924, 0.2556 0 0.39, 0.2556 0.06 0.39, 0.258 0 0.39, 0.258 0.06 0.39, 0.2604 0 0.3876, 0.2604 0.06 0.3876, 0.258 0 0.3852, 0.258 0.06 0.3852, 0.2556 0 0.3852, 0.2556 0.06 0.3852, 0.2532 0 0.3828, 0.2532 0.06 0.3828, 0.2508 0 0.3816, 0.2508 0.06 0.3816, 0.2484 0 0.3816, 0.2484 0.06 0.3816, 0.246 0 0.3804, 0.246 0.06 0.3804, 0.2436 0 0.3792, 0.2436 0.06 0.3792, 0.24 0 0.378, 0.24 0.06 0.378, 0.2364 0 0.3768, 0.2364 0.06 0.3768, 0.2184 0 0.3756, 0.2184 0.06 0.3756, 0.2148 0 0.3768, 0.2148 0.06 0.3768, 0.2112 0 0.378, 0.2112 0.06 0.378, 0.2112 0 0.3756, 0.2112 0.06 0.3756, 0.2148 0 0.3732, 0.2148 0.06 0.3732, 0.2172 0 0.3732, 0.2172 0.06 0.3732, 0.2232 0 0.3672, 0.2232 0.06 0.3672, 0.2256 0 0.366, 0.2256 0.06 0.366, 0.2292 0 0.3612, 0.2292 0.06 0.3612, 0.2304 0 0.3588, 0.2304 0.06 0.3588, 0.2316 0 0.3564, 0.2316 0.06 0.3564, 0.2328 0 0.354, 0.2328 0.06 0.354, 0.2328 0 0.3516, 0.2328 0.06 0.3516, 0.234 0 0.3492, 0.234 0.06 0.3492, 0.2352 0 0.3456, 0.2352 0.06 0.3456, 0.2364 0 0.342, 0.2364 0.06 0.342, 0.2376 0 0.3384, 0.2376 0.06 0.3384, 0.2388 0 0.3348, 0.2388 0.06 0.3348, 0.2364 0 0.3348, 0.2364 0.06 0.3348, 0.2328 0 0.336, 0.2328 0.06 0.336, 0.2292 0 0.3372, 0.2292 0.06 0.3372, 0.2244 0 0.3384, 0.2244 0.06 0.3384, 0.222 0 0.3396, 0.222 0.06 0.3396, 0.2196 0 0.3408, 0.2196 0.06 0.3408, 0.216 0 0.342, 0.216 0.06 0.342, 0.2136 0 0.3432, 0.2136 0.06 0.3432, 0.2112 0 0.3456, 0.2112 0.06 0.3456, 0.2004 0 0.3552, 0.2004 0.06 0.3552, 0.1992 0 0.3576, 0.1992 0.06 0.3576, 0.198 0 0.36, 0.198 0.06 0.36, 0.1968 0 0.3624, 0.1968 0.06 0.3624, 0.1956 0 0.3588, 0.1956 0.06 0.3588, 0.1968 0 0.3528, 0.1968 0.06 0.3528, 0.198 0 0.3408, 0.198 0.06 0.3408, 0.1968 0 0.336, 0.1968 0.06 0.336, 0.1956 0 0.3324, 0.1956 0.06 0.3324, 0.1944 0 0.33, 0.1944 0.06 0.33, 0.1932 0 0.3276, 0.1932 0.06 0.3276, 0.192 0 0.324, 0.192 0.06 0.324, 0.1908 0 0.3216, 0.1908 0.06 0.3216, 0.1896 0 0.3192, 0.1896 0.06 0.3192, 0.1884 0 0.3168, 0.1884 0.06 0.3168
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 100, 101, 99, -1, 100, 102, 103, 101, -1, 102, 104, 105, 103, -1, 104, 106, 107, 105, -1, 106, 108, 109, 107, -1, 108, 110, 111, 109, -1, 110, 112, 113, 111, -1, 112, 114, 115, 113, -1, 114, 116, 117, 115, -1, 116, 118, 119, 117, -1, 118, 120, 121, 119, -1, 120, 122, 123, 121, -1, 122, 124, 125, 123, -1, 124, 126, 127, 125, -1, 126, 128, 129, 127, -1, 128, 130, 131, 129, -1, 130, 132, 133, 131, -1, 132, 134, 135, 133, -1, 134, 136, 137, 135, -1, 136, 138, 139, 137, -1, 138, 140, 141, 139, -1, 140, 142, 143, 141, -1, 142, 144, 145, 143, -1, 144, 146, 147, 145, -1, 146, 148, 149, 147, -1, 148, 150, 151, 149, -1, 150, 152, 153, 151, -1, 152, 154, 155, 153, -1, 154, 156, 157, 155, -1, 156, 158, 159, 157, -1, 158, 160, 161, 159, -1, 160, 162, 163, 161, -1, 162, 164, 165, 163, -1, 164, 166, 167, 165, -1, 166, 168, 169, 167, -1, 168, 170, 171, 169, -1, 170, 172, 173, 171, -1, 172, 174, 175, 173, -1, 174, 176, 177, 175, -1, 176, 178, 179, 177, -1, 178, 180, 181, 179, -1, 180, 182, 183, 181, -1, 182, 184, 185, 183, -1, 184, 186, 187, 185, -1, 186, 188, 189, 187, -1, 188, 190, 191, 189, -1, 190, 192, 193, 191, -1, 192, 194, 195, 193, -1, 194, 196, 197, 195, -1, 196, 198, 199, 197, -1, 198, 200, 201, 199, -1, 200, 202, 203, 201, -1, 202, 204, 205, 203, -1, 204, 206, 207, 205, -1, 206, 208, 209, 207, -1, 208, 210, 211, 209, -1, 210, 212, 213, 211, -1, 212, 214, 215, 213, -1, 214, 216, 217, 215, -1, 216, 218, 219, 217, -1, 218, 220, 221, 219, -1, 220, 222, 223, 221, -1, 222, 224, 225, 223, -1, 224, 226, 227, 225, -1, 226, 228, 229, 227, -1, 228, 230, 231, 229, -1, 230, 232, 233, 231, -1, 232, 234, 235, 233, -1, 234, 236, 237, 235, -1, 236, 238, 239, 237, -1, 238, 240, 241, 239, -1, 240, 242, 243, 241, -1, 242, 244, 245, 243, -1, 244, 246, 247, 245, -1, 246, 248, 249, 247, -1, 248, 250, 251, 249, -1, 250, 252, 253, 251, -1, 252, 254, 255, 253, -1, 254, 256, 257, 255, -1, 256, 258, 259, 257, -1, 258, 260, 261, 259, -1, 260, 262, 263, 261, -1, 262, 264, 265, 263, -1, 264, 266, 267, 265, -1, 266, 268, 269, 267, -1, 268, 270, 271, 269, -1, 270, 272, 273, 271, -1, 272, 274, 275, 273, -1, 274, 276, 277, 275, -1, 276, 278, 279, 277, -1, 278, 280, 281, 279, -1, 280, 282, 283, 281, -1, 282, 284, 285, 283, -1, 284, 286, 287, 285, -1, 286, 288, 289, 287, -1, 288, 290, 291, 289, -1, 290, 292, 293, 291, -1, 292, 294, 295, 293, -1, 294, 296, 297, 295, -1, 296, 298, 299, 297, -1, 298, 300, 301, 299, -1, 300, 302, 303, 301, -1, 302, 304, 305, 303, -1, 304, 306, 307, 305, -1, 306, 308, 309, 307, -1, 308, 310, 311, 309, -1, 310, 312, 313, 311, -1, 312, 314, 315, 313, -1, 314, 316, 317, 315, -1, 316, 318, 319, 317, -1, 318, 320, 321, 319, -1, 320, 322, 323, 321, -1, 322, 324, 325, 323, -1, 324, 326, 327, 325, -1, 326, 328, 329, 327, -1, 328, 330, 331, 329, -1, 330, 332, 333, 331, -1, 332, 334, 335, 333, -1, 334, 336, 337, 335, -1, 336, 338, 339, 337, -1, 338, 340, 341, 339, -1, 340, 342, 343, 341, -1, 342, 344, 345, 343, -1, 344, 346, 347, 345, -1, 346, 348, 349, 347, -1, 348, 350, 351, 349, -1, 350, 352, 353, 351, -1, 352, 354, 355, 353, -1, 354, 356, 357, 355, -1, 356, 358, 359, 357, -1, 358, 360, 361, 359, -1, 360, 362, 363, 361, -1, 362, 364, 365, 363, -1, 364, 366, 367, 365, -1, 366, 368, 369, 367, -1, 368, 370, 371, 369, -1, 370, 372, 373, 371, -1, 372, 374, 375, 373, -1, 374, 376, 377, 375, -1, 376, 378, 379, 377, -1, 378, 380, 381, 379, -1, 380, 382, 383, 381, -1, 382, 384, 385, 383, -1, 384, 386, 387, 385, -1, 386, 388, 389, 387, -1, 388, 390, 391, 389, -1, 390, 392, 393, 391, -1, 392, 394, 395, 393, -1, 394, 396, 397, 395, -1, 396, 398, 399, 397, -1, 398, 400, 401, 399, -1, 400, 402, 403, 401, -1, 402, 404, 405, 403, -1, 404, 406, 407, 405, -1, 406, 408, 409, 407, -1, 408, 410, 411, 409, -1, 410, 412, 413, 411, -1, 412, 414, 415, 413, -1, 414, 0, 1, 415, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215, 217, 219, 221, 223, 225, 227, 229, 231, 233, 235, 237, 239, 241, 243, 245, 247, 249, 251, 253, 255, 257, 259, 261, 263, 265, 267, 269, 271, 273, 275, 277, 279, 281, 283, 285, 287, 289, 291, 293, 295, 297, 299, 301, 303, 305, 307, 309, 311, 313, 315, 317, 319, 321, 323, 325, 327, 329, 331, 333, 335, 337, 339, 341, 343, 345, 347, 349, 351, 353, 355, 357, 359, 361, 363, 365, 367, 369, 371, 373, 375, 377, 379, 381, 383, 385, 387, 389, 391, 393, 395, 397, 399, 401, 403, 405, 407, 409, 411, 413, 415, -1
+                ]
+              }
+            }
+          ]
+          name "curved9"
+          boundingObject USE CURVED9
+        }
+        Solid {
+          children [
+            DEF CURVED10 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4452 0 0.2856, 0.4452 0.06 0.2856, 0.4452 0 0.2904, 0.4452 0.06 0.2904, 0.444 0 0.2928, 0.444 0.06 0.2928, 0.4416 0 0.2952, 0.4416 0.06 0.2952, 0.4404 0 0.2976, 0.4404 0.06 0.2976, 0.4392 0 0.3, 0.4392 0.06 0.3, 0.4392 0 0.3024, 0.4392 0.06 0.3024, 0.438 0 0.306, 0.438 0.06 0.306, 0.4332 0 0.3108, 0.4332 0.06 0.3108, 0.4296 0 0.3108, 0.4296 0.06 0.3108, 0.4272 0 0.3096, 0.4272 0.06 0.3096, 0.4248 0 0.3084, 0.4248 0.06 0.3084, 0.4224 0 0.306, 0.4224 0.06 0.306, 0.42 0 0.3048, 0.42 0.06 0.3048, 0.4176 0 0.3036, 0.4176 0.06 0.3036, 0.4152 0 0.3024, 0.4152 0.06 0.3024, 0.4128 0 0.3012, 0.4128 0.06 0.3012, 0.4032 0 0.2928, 0.4032 0.06 0.2928, 0.402 0 0.2904, 0.402 0.06 0.2904, 0.4008 0 0.294, 0.4008 0.06 0.294, 0.402 0 0.2976, 0.402 0.06 0.2976, 0.4032 0 0.3, 0.4032 0.06 0.3, 0.4068 0 0.3036, 0.4068 0.06 0.3036, 0.4092 0 0.3048, 0.4092 0.06 0.3048, 0.4116 0 0.3048, 0.4116 0.06 0.3048, 0.414 0 0.306, 0.414 0.06 0.306, 0.4176 0 0.3072, 0.4176 0.06 0.3072, 0.42 0 0.3084, 0.42 0.06 0.3084, 0.426 0 0.3144, 0.426 0.06 0.3144, 0.4284 0 0.3144, 0.4284 0.06 0.3144, 0.4344 0 0.3156, 0.4344 0.06 0.3156, 0.438 0 0.3144, 0.438 0.06 0.3144, 0.4404 0 0.312, 0.4404 0.06 0.312, 0.4416 0 0.3096, 0.4416 0.06 0.3096, 0.4416 0 0.3036, 0.4416 0.06 0.3036, 0.4428 0 0.3012, 0.4428 0.06 0.3012, 0.444 0 0.2988, 0.444 0.06 0.2988, 0.4452 0 0.2964, 0.4452 0.06 0.2964, 0.4464 0 0.288, 0.4464 0.06 0.288
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 0, 1, 77, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, -1
+                ]
+              }
+            }
+          ]
+          name "curved10"
+          boundingObject USE CURVED10
+        }
+        Solid {
+          children [
+            DEF CURVED11 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4224 0 0.264, 0.4224 0.06 0.264, 0.42 0 0.2652, 0.42 0.06 0.2652, 0.4116 0 0.2736, 0.4116 0.06 0.2736, 0.4104 0 0.276, 0.4104 0.06 0.276, 0.408 0 0.2796, 0.408 0.06 0.2796, 0.408 0 0.282, 0.408 0.06 0.282, 0.4068 0 0.2868, 0.4068 0.06 0.2868, 0.408 0 0.2904, 0.408 0.06 0.2904, 0.4092 0 0.2928, 0.4092 0.06 0.2928, 0.4116 0 0.2952, 0.4116 0.06 0.2952, 0.414 0 0.2964, 0.414 0.06 0.2964, 0.4164 0 0.2976, 0.4164 0.06 0.2976, 0.42 0 0.2976, 0.42 0.06 0.2976, 0.4224 0 0.3, 0.4224 0.06 0.3, 0.4248 0 0.3, 0.4248 0.06 0.3, 0.4272 0 0.3012, 0.4272 0.06 0.3012, 0.4296 0 0.3024, 0.4296 0.06 0.3024, 0.432 0 0.3024, 0.432 0.06 0.3024, 0.4332 0 0.3, 0.4332 0.06 0.3, 0.4332 0 0.2976, 0.4332 0.06 0.2976, 0.4356 0 0.2952, 0.4356 0.06 0.2952, 0.4368 0 0.2928, 0.4368 0.06 0.2928, 0.438 0 0.2904, 0.438 0.06 0.2904, 0.4392 0 0.288, 0.4392 0.06 0.288, 0.4404 0 0.2856, 0.4404 0.06 0.2856, 0.4404 0 0.2712, 0.4404 0.06 0.2712, 0.4392 0 0.2664, 0.4392 0.06 0.2664, 0.438 0 0.2712, 0.438 0.06 0.2712, 0.4368 0 0.2736, 0.4368 0.06 0.2736, 0.4344 0 0.276, 0.4344 0.06 0.276, 0.4332 0 0.27, 0.4332 0.06 0.27, 0.432 0 0.2652, 0.432 0.06 0.2652, 0.4272 0 0.2688, 0.4272 0.06 0.2688, 0.42 0 0.2748, 0.42 0.06 0.2748, 0.4176 0 0.2736, 0.4176 0.06 0.2736, 0.4188 0 0.2712, 0.4188 0.06 0.2712, 0.42 0 0.2688, 0.42 0.06 0.2688
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 0, 1, 73, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, -1
+                ]
+              }
+            }
+          ]
+          name "curved11"
+          boundingObject USE CURVED11
+        }
+        Solid {
+          children [
+            DEF CURVED12 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.5016 0 0.2508, 0.5016 0.06 0.2508, 0.5028 0 0.2556, 0.5028 0.06 0.2556, 0.504 0 0.2592, 0.504 0.06 0.2592, 0.4992 0 0.2568, 0.4992 0.06 0.2568, 0.4992 0 0.264, 0.4992 0.06 0.264, 0.498 0 0.2868, 0.498 0.06 0.2868, 0.4992 0 0.2892, 0.4992 0.06 0.2892, 0.5004 0 0.2916, 0.5004 0.06 0.2916, 0.5016 0 0.294, 0.5016 0.06 0.294, 0.5028 0 0.2964, 0.5028 0.06 0.2964, 0.504 0 0.2988, 0.504 0.06 0.2988, 0.5052 0 0.3012, 0.5052 0.06 0.3012, 0.5064 0 0.3036, 0.5064 0.06 0.3036, 0.5124 0 0.2976, 0.5124 0.06 0.2976, 0.5124 0 0.2952, 0.5124 0.06 0.2952, 0.5136 0 0.2904, 0.5136 0.06 0.2904, 0.5172 0 0.2892, 0.5172 0.06 0.2892, 0.5208 0 0.2856, 0.5208 0.06 0.2856, 0.522 0 0.2832, 0.522 0.06 0.2832, 0.522 0 0.2808, 0.522 0.06 0.2808, 0.5232 0 0.2736, 0.5232 0.06 0.2736, 0.522 0 0.2712, 0.522 0.06 0.2712, 0.5208 0 0.2676, 0.5208 0.06 0.2676, 0.5184 0 0.2652, 0.5184 0.06 0.2652, 0.5112 0 0.2568, 0.5112 0.06 0.2568, 0.5064 0 0.2532, 0.5064 0.06 0.2532
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 0, 1, 51, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, -1
+                ]
+              }
+            }
+          ]
+          name "curved12"
+          boundingObject USE CURVED12
+        }
+        Solid {
+          children [
+            DEF CURVED13 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4296 0 0.2472
+                    0.4296 0.06 0.2472
+                    0.4284 0 0.2496
+                    0.4284 0.06 0.2496
+                    0.4272 0 0.252
+                    0.4272 0.06 0.252
+                    0.426 0 0.2544
+                    0.426 0.06 0.2544
+                    0.4296 0 0.258
+                    0.4296 0.06 0.258
+                    0.432 0 0.2592
+                    0.432 0.06 0.2592
+                    0.4356 0 0.2592
+                    0.4356 0.06 0.2592
+                    0.438 0 0.258
+                    0.438 0.06 0.258
+                    0.4392 0 0.2544
+                    0.4392 0.06 0.2544
+                    0.4392 0 0.252
+                    0.4392 0.06 0.252
+                    0.438 0 0.2496
+                    0.438 0.06 0.2496
+                    0.4356 0 0.2472
+                    0.4356 0.06 0.2472
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 0, 1, 23, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, -1
+                ]
+              }
+            }
+          ]
+          name "curved13"
+          boundingObject USE CURVED13
+        }
+        Solid {
+          children [
+            DEF CURVED14 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4896 0 0.2388
+                    0.4896 0.06 0.2388
+                    0.492 0 0.2412
+                    0.492 0.06 0.2412
+                    0.4956 0 0.2436
+                    0.4956 0.06 0.2436
+                    0.4968 0 0.2412
+                    0.4968 0.06 0.2412
+                    0.4944 0 0.2388
+                    0.4944 0.06 0.2388
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 0, 1, 9, -1, 1, 3, 5, 7, 9, -1
+                ]
+              }
+            }
+          ]
+          name "curved14"
+          boundingObject USE CURVED14
+        }
+        Solid {
+          children [
+            DEF CURVED15 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.5328 0 0.2364, 0.5328 0.06 0.2364, 0.5208 0 0.2376, 0.5208 0.06 0.2376, 0.5124 0 0.2388, 0.5124 0.06 0.2388, 0.5076 0 0.24, 0.5076 0.06 0.24, 0.51 0 0.24, 0.51 0.06 0.24, 0.5136 0 0.2412, 0.5136 0.06 0.2412, 0.516 0 0.2424, 0.516 0.06 0.2424, 0.516 0 0.2448, 0.516 0.06 0.2448, 0.5124 0 0.2448, 0.5124 0.06 0.2448, 0.516 0 0.2472, 0.516 0.06 0.2472, 0.5136 0 0.2496, 0.5136 0.06 0.2496, 0.5112 0 0.2484, 0.5112 0.06 0.2484, 0.516 0 0.2532, 0.516 0.06 0.2532, 0.5196 0 0.2556, 0.5196 0.06 0.2556, 0.522 0 0.2568, 0.522 0.06 0.2568, 0.5256 0 0.2592, 0.5256 0.06 0.2592, 0.528 0 0.2604, 0.528 0.06 0.2604, 0.5304 0 0.2604, 0.5304 0.06 0.2604, 0.534 0 0.2616, 0.534 0.06 0.2616, 0.54 0 0.2628, 0.54 0.06 0.2628, 0.5568 0 0.264, 0.5568 0.06 0.264, 0.564 0 0.2628, 0.564 0.06 0.2628, 0.5664 0 0.2616, 0.5664 0.06 0.2616, 0.5688 0 0.2592, 0.5688 0.06 0.2592, 0.5688 0 0.2556, 0.5688 0.06 0.2556, 0.5664 0 0.2532, 0.5664 0.06 0.2532, 0.5616 0 0.2472, 0.5616 0.06 0.2472, 0.558 0 0.2448, 0.558 0.06 0.2448, 0.5544 0 0.2424, 0.5544 0.06 0.2424, 0.552 0 0.2412, 0.552 0.06 0.2412, 0.5496 0 0.2412, 0.5496 0.06 0.2412, 0.546 0 0.24, 0.546 0.06 0.24, 0.5436 0 0.2388, 0.5436 0.06 0.2388, 0.5352 0 0.2376, 0.5352 0.06 0.2376
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 0, 1, 67, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, -1
+                ]
+              }
+            }
+          ]
+          name "curved15"
+          boundingObject USE CURVED15
+        }
+        Solid {
+          children [
+            DEF CURVED16 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4764 0 0.2352, 0.4764 0.06 0.2352, 0.4776 0 0.2376, 0.4776 0.06 0.2376, 0.4776 0 0.2556, 0.4776 0.06 0.2556, 0.4764 0 0.2592, 0.4764 0.06 0.2592, 0.4752 0 0.264, 0.4752 0.06 0.264, 0.4764 0 0.2712, 0.4764 0.06 0.2712, 0.4752 0 0.2748, 0.4752 0.06 0.2748, 0.4716 0 0.2784, 0.4716 0.06 0.2784, 0.468 0 0.2808, 0.468 0.06 0.2808, 0.4644 0 0.2808, 0.4644 0.06 0.2808, 0.4536 0 0.282, 0.4536 0.06 0.282, 0.456 0 0.282, 0.456 0.06 0.282, 0.4704 0 0.2832, 0.4704 0.06 0.2832, 0.474 0 0.282, 0.474 0.06 0.282, 0.4764 0 0.2808, 0.4764 0.06 0.2808, 0.4812 0 0.276, 0.4812 0.06 0.276, 0.4812 0 0.2652, 0.4812 0.06 0.2652, 0.48 0 0.2616, 0.48 0.06 0.2616, 0.4812 0 0.2568, 0.4812 0.06 0.2568, 0.4824 0 0.2436, 0.4824 0.06 0.2436, 0.4812 0 0.24, 0.4812 0.06 0.24
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 0, 1, 41, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, -1
+                ]
+              }
+            }
+          ]
+          name "curved16"
+          boundingObject USE CURVED16
+        }
+        Solid {
+          children [
+            DEF CURVED17 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.39 0 0.234, 0.39 0.06 0.234, 0.3876 0 0.2352, 0.3876 0.06 0.2352, 0.3852 0 0.2376, 0.3852 0.06 0.2376, 0.3828 0 0.24, 0.3828 0.06 0.24, 0.3828 0 0.2436, 0.3828 0.06 0.2436, 0.384 0 0.246, 0.384 0.06 0.246, 0.39 0 0.252, 0.39 0.06 0.252, 0.3924 0 0.2556, 0.3924 0.06 0.2556, 0.3936 0 0.258, 0.3936 0.06 0.258, 0.3948 0 0.2604, 0.3948 0.06 0.2604, 0.396 0 0.2628, 0.396 0.06 0.2628, 0.3972 0 0.2652, 0.3972 0.06 0.2652, 0.3996 0 0.2688, 0.3996 0.06 0.2688, 0.402 0 0.27, 0.402 0.06 0.27, 0.4044 0 0.27, 0.4044 0.06 0.27, 0.4068 0 0.2688, 0.4068 0.06 0.2688, 0.414 0 0.2616, 0.414 0.06 0.2616, 0.4176 0 0.2592, 0.4176 0.06 0.2592, 0.42 0 0.258, 0.42 0.06 0.258, 0.4176 0 0.2568, 0.4176 0.06 0.2568, 0.4116 0 0.258, 0.4116 0.06 0.258, 0.4116 0 0.2556, 0.4116 0.06 0.2556, 0.4152 0 0.2532, 0.4152 0.06 0.2532, 0.4176 0 0.252, 0.4176 0.06 0.252, 0.42 0 0.2508, 0.42 0.06 0.2508, 0.4188 0 0.2484, 0.4188 0.06 0.2484, 0.4152 0 0.246, 0.4152 0.06 0.246, 0.4128 0 0.246, 0.4128 0.06 0.246, 0.4104 0 0.2448, 0.4104 0.06 0.2448, 0.4104 0 0.2424, 0.4104 0.06 0.2424, 0.4176 0 0.2424, 0.4176 0.06 0.2424, 0.4152 0 0.2412, 0.4152 0.06 0.2412, 0.4116 0 0.2388, 0.4116 0.06 0.2388, 0.4092 0 0.2376, 0.4092 0.06 0.2376, 0.4068 0 0.2376, 0.4068 0.06 0.2376, 0.4044 0 0.2364, 0.4044 0.06 0.2364, 0.402 0 0.2352, 0.402 0.06 0.2352
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 0, 1, 73, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, -1
+                ]
+              }
+            }
+          ]
+          name "curved17"
+          boundingObject USE CURVED17
+        }
+        Solid {
+          children [
+            DEF CURVED18 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.378 0 0.234, 0.378 0.06 0.234, 0.3768 0 0.2364, 0.3768 0.06 0.2364, 0.3744 0 0.2388, 0.3744 0.06 0.2388, 0.3744 0 0.2412, 0.3744 0.06 0.2412, 0.3732 0 0.246, 0.3732 0.06 0.246, 0.3744 0 0.2496, 0.3744 0.06 0.2496, 0.3768 0 0.252, 0.3768 0.06 0.252, 0.3816 0 0.258, 0.3816 0.06 0.258, 0.3828 0 0.2604, 0.3828 0.06 0.2604, 0.384 0 0.2628, 0.384 0.06 0.2628, 0.384 0 0.2664, 0.384 0.06 0.2664, 0.3852 0 0.2712, 0.3852 0.06 0.2712, 0.3864 0 0.2736, 0.3864 0.06 0.2736, 0.3876 0 0.2772, 0.3876 0.06 0.2772, 0.39 0 0.2784, 0.39 0.06 0.2784, 0.3984 0 0.2784, 0.3984 0.06 0.2784, 0.4008 0 0.2772, 0.4008 0.06 0.2772, 0.3996 0 0.2748, 0.3996 0.06 0.2748, 0.3972 0 0.2748, 0.3972 0.06 0.2748, 0.3948 0 0.2724, 0.3948 0.06 0.2724, 0.3912 0 0.27, 0.3912 0.06 0.27, 0.3888 0 0.2664, 0.3888 0.06 0.2664, 0.3888 0 0.264, 0.3888 0.06 0.264, 0.3876 0 0.2616, 0.3876 0.06 0.2616, 0.3864 0 0.2592, 0.3864 0.06 0.2592, 0.3852 0 0.2568, 0.3852 0.06 0.2568, 0.3816 0 0.2532, 0.3816 0.06 0.2532, 0.378 0 0.2484, 0.378 0.06 0.2484, 0.3768 0 0.246, 0.3768 0.06 0.246, 0.3768 0 0.2388, 0.3768 0.06 0.2388
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 0, 1, 59, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, -1
+                ]
+              }
+            }
+          ]
+          name "curved18"
+          boundingObject USE CURVED18
+        }
+        Solid {
+          children [
+            DEF CURVED19 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.51 0 0.2328
+                    0.51 0.06 0.2328
+                  ]
+                }
+                coordIndex [
+                  0, 0, 1, 1, -1, 1, -1
+                ]
+              }
+            }
+          ]
+          name "curved19"
+          boundingObject USE CURVED19
+        }
+        Solid {
+          children [
+            DEF CURVED20 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4476 0 0.2292, 0.4476 0.06 0.2292, 0.444 0 0.2304, 0.444 0.06 0.2304, 0.4404 0 0.2316, 0.4404 0.06 0.2316, 0.438 0 0.234, 0.438 0.06 0.234, 0.4368 0 0.2364, 0.4368 0.06 0.2364, 0.4368 0 0.2412, 0.4368 0.06 0.2412, 0.4476 0 0.2316, 0.4476 0.06 0.2316, 0.4488 0 0.234, 0.4488 0.06 0.234, 0.4476 0 0.2364, 0.4476 0.06 0.2364, 0.4464 0 0.2388, 0.4464 0.06 0.2388, 0.4452 0 0.2412, 0.4452 0.06 0.2412, 0.444 0 0.2436, 0.444 0.06 0.2436, 0.4428 0 0.246, 0.4428 0.06 0.246, 0.4464 0 0.246, 0.4464 0.06 0.246, 0.4524 0 0.2448, 0.4524 0.06 0.2448, 0.456 0 0.2436, 0.456 0.06 0.2436, 0.4572 0 0.246, 0.4572 0.06 0.246, 0.4548 0 0.2472, 0.4548 0.06 0.2472, 0.4524 0 0.2484, 0.4524 0.06 0.2484, 0.45 0 0.2496, 0.45 0.06 0.2496, 0.4476 0 0.2508, 0.4476 0.06 0.2508, 0.4464 0 0.2544, 0.4464 0.06 0.2544, 0.45 0 0.258, 0.45 0.06 0.258, 0.4548 0 0.2616, 0.4548 0.06 0.2616, 0.4512 0 0.2628, 0.4512 0.06 0.2628, 0.444 0 0.2616, 0.444 0.06 0.2616, 0.4452 0 0.264, 0.4452 0.06 0.264, 0.4452 0 0.2688, 0.4452 0.06 0.2688, 0.4464 0 0.2736, 0.4464 0.06 0.2736, 0.4488 0 0.276, 0.4488 0.06 0.276, 0.4512 0 0.2772, 0.4512 0.06 0.2772, 0.4608 0 0.2772, 0.4608 0.06 0.2772, 0.4656 0 0.276, 0.4656 0.06 0.276, 0.468 0 0.2748, 0.468 0.06 0.2748, 0.4704 0 0.2724, 0.4704 0.06 0.2724, 0.4704 0 0.2664, 0.4704 0.06 0.2664, 0.4704 0 0.264, 0.4704 0.06 0.264, 0.4704 0 0.2604, 0.4704 0.06 0.2604, 0.4716 0 0.2388, 0.4716 0.06 0.2388, 0.4692 0 0.2364, 0.4692 0.06 0.2364, 0.4656 0 0.2316, 0.4656 0.06 0.2316, 0.4632 0 0.2304, 0.4632 0.06 0.2304, 0.4596 0 0.2304, 0.4596 0.06 0.2304
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 0, 1, 85, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, -1
+                ]
+              }
+            }
+          ]
+          name "curved20"
+          boundingObject USE CURVED20
+        }
+        Solid {
+          children [
+            DEF CURVED21 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4668 0 0.2256
+                    0.4668 0.06 0.2256
+                  ]
+                }
+                coordIndex [
+                  0, 0, 1, 1, -1, 1, -1
+                ]
+              }
+            }
+          ]
+          name "curved21"
+          boundingObject USE CURVED21
+        }
+        Solid {
+          children [
+            DEF CURVED22 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4092 0 0.222, 0.4092 0.06 0.222, 0.4056 0 0.2256, 0.4056 0.06 0.2256, 0.4056 0 0.2292, 0.4056 0.06 0.2292, 0.408 0 0.2316, 0.408 0.06 0.2316, 0.4104 0 0.2328, 0.4104 0.06 0.2328, 0.4128 0 0.234, 0.4128 0.06 0.234, 0.4164 0 0.2364, 0.4164 0.06 0.2364, 0.4188 0 0.2364, 0.4188 0.06 0.2364, 0.4212 0 0.2388, 0.4212 0.06 0.2388, 0.4236 0 0.24, 0.4236 0.06 0.24, 0.426 0 0.24, 0.426 0.06 0.24, 0.4224 0 0.2352, 0.4224 0.06 0.2352, 0.4272 0 0.234, 0.4272 0.06 0.234, 0.426 0 0.2316, 0.426 0.06 0.2316, 0.4236 0 0.2304, 0.4236 0.06 0.2304, 0.4176 0 0.2244, 0.4176 0.06 0.2244, 0.4152 0 0.2232, 0.4152 0.06 0.2232, 0.4128 0 0.222, 0.4128 0.06 0.222
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 0, 1, 35, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, -1
+                ]
+              }
+            }
+          ]
+          name "curved22"
+          boundingObject USE CURVED22
+        }
+        Solid {
+          children [
+            DEF CURVED23 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4068 0 0.2112
+                    0.4068 0.06 0.2112
+                    0.4044 0 0.2136
+                    0.4044 0.06 0.2136
+                    0.3996 0 0.2172
+                    0.3996 0.06 0.2172
+                    0.3996 0 0.2196
+                    0.3996 0.06 0.2196
+                    0.3984 0 0.2244
+                    0.3984 0.06 0.2244
+                    0.4092 0 0.216
+                    0.4092 0.06 0.216
+                    0.4092 0 0.2124
+                    0.4092 0.06 0.2124
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 0, 1, 13, -1, 1, 3, 5, 7, 9, 11, 13, -1
+                ]
+              }
+            }
+          ]
+          name "curved23"
+          boundingObject USE CURVED23
+        }
+        Solid {
+          children [
+            DEF CURVED24 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.552 0 0.2076, 0.552 0.06 0.2076, 0.5484 0 0.2088, 0.5484 0.06 0.2088, 0.5448 0 0.21, 0.5448 0.06 0.21, 0.5424 0 0.2124, 0.5424 0.06 0.2124, 0.54 0 0.2136, 0.54 0.06 0.2136, 0.5376 0 0.2148, 0.5376 0.06 0.2148, 0.534 0 0.2172, 0.534 0.06 0.2172, 0.5304 0 0.2196, 0.5304 0.06 0.2196, 0.5268 0 0.222, 0.5268 0.06 0.222, 0.5232 0 0.2244, 0.5232 0.06 0.2244, 0.5196 0 0.2268, 0.5196 0.06 0.2268, 0.516 0 0.2292, 0.516 0.06 0.2292, 0.5124 0 0.2316, 0.5124 0.06 0.2316, 0.5184 0 0.2292, 0.5184 0.06 0.2292, 0.5184 0 0.2316, 0.5184 0.06 0.2316, 0.5304 0 0.2328, 0.5304 0.06 0.2328, 0.5472 0 0.2316, 0.5472 0.06 0.2316, 0.5496 0 0.2304, 0.5496 0.06 0.2304, 0.552 0 0.2292, 0.552 0.06 0.2292, 0.5544 0 0.228, 0.5544 0.06 0.228, 0.5628 0 0.2196, 0.5628 0.06 0.2196, 0.5628 0 0.2124, 0.5628 0.06 0.2124, 0.5616 0 0.21, 0.5616 0.06 0.21, 0.5592 0 0.2088, 0.5592 0.06 0.2088, 0.5568 0 0.2076, 0.5568 0.06 0.2076
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 0, 1, 49, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, -1
+                ]
+              }
+            }
+          ]
+          name "curved24"
+          boundingObject USE CURVED24
+        }
+        Solid {
+          children [
+            DEF CURVED25 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4596 0 0.2052, 0.4596 0.06 0.2052, 0.4476 0 0.2172, 0.4476 0.06 0.2172, 0.4428 0 0.2208, 0.4428 0.06 0.2208, 0.4404 0 0.2208, 0.4404 0.06 0.2208, 0.438 0 0.222, 0.438 0.06 0.222, 0.4236 0 0.2232, 0.4236 0.06 0.2232, 0.426 0 0.2256, 0.426 0.06 0.2256, 0.4284 0 0.2256, 0.4284 0.06 0.2256, 0.438 0 0.2268, 0.438 0.06 0.2268, 0.4428 0 0.2256, 0.4428 0.06 0.2256, 0.4452 0 0.2244, 0.4452 0.06 0.2244, 0.4476 0 0.2232, 0.4476 0.06 0.2232, 0.4536 0 0.2172, 0.4536 0.06 0.2172, 0.456 0 0.2136, 0.456 0.06 0.2136, 0.4572 0 0.2112, 0.4572 0.06 0.2112, 0.4584 0 0.2088, 0.4584 0.06 0.2088
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 0, 1, 31, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, -1
+                ]
+              }
+            }
+          ]
+          name "curved25"
+          boundingObject USE CURVED25
+        }
+        Solid {
+          children [
+            DEF CURVED26 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.516 0 0.1896, 0.516 0.06 0.1896, 0.516 0 0.1968, 0.516 0.06 0.1968, 0.5148 0 0.2004, 0.5148 0.06 0.2004, 0.5136 0 0.2028, 0.5136 0.06 0.2028, 0.5064 0 0.21, 0.5064 0.06 0.21, 0.5064 0 0.2124, 0.5064 0.06 0.2124, 0.5052 0 0.216, 0.5052 0.06 0.216, 0.504 0 0.2196, 0.504 0.06 0.2196, 0.5028 0 0.2232, 0.5028 0.06 0.2232, 0.4968 0 0.2292, 0.4968 0.06 0.2292, 0.4944 0 0.2304, 0.4944 0.06 0.2304, 0.4872 0 0.2304, 0.4872 0.06 0.2304, 0.4824 0 0.2292, 0.4824 0.06 0.2292, 0.4764 0 0.228, 0.4764 0.06 0.228, 0.4704 0 0.2268, 0.4704 0.06 0.2268, 0.4728 0 0.2268, 0.4728 0.06 0.2268, 0.4788 0 0.2292, 0.4788 0.06 0.2292, 0.4824 0 0.2316, 0.4824 0.06 0.2316, 0.4848 0 0.2328, 0.4848 0.06 0.2328, 0.4872 0 0.2328, 0.4872 0.06 0.2328, 0.4956 0 0.234, 0.4956 0.06 0.234, 0.4992 0 0.2328, 0.4992 0.06 0.2328, 0.5028 0 0.2292, 0.5028 0.06 0.2292, 0.504 0 0.2268, 0.504 0.06 0.2268, 0.5052 0 0.2244, 0.5052 0.06 0.2244, 0.5052 0 0.222, 0.5052 0.06 0.222, 0.5064 0 0.2184, 0.5064 0.06 0.2184, 0.5076 0 0.2148, 0.5076 0.06 0.2148, 0.5088 0 0.2124, 0.5088 0.06 0.2124, 0.5136 0 0.2076, 0.5136 0.06 0.2076, 0.5184 0 0.2016, 0.5184 0.06 0.2016, 0.5196 0 0.1992, 0.5196 0.06 0.1992, 0.5196 0 0.192, 0.5196 0.06 0.192
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 0, 1, 65, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, -1
+                ]
+              }
+            }
+          ]
+          name "curved26"
+          boundingObject USE CURVED26
+        }
+        Solid {
+          children [
+            DEF CURVED27 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4896 0 0.1776, 0.4896 0.06 0.1776, 0.4848 0 0.1788, 0.4848 0.06 0.1788, 0.4824 0 0.18, 0.4824 0.06 0.18, 0.4848 0 0.1824, 0.4848 0.06 0.1824, 0.4896 0 0.186, 0.4896 0.06 0.186, 0.486 0 0.1872, 0.486 0.06 0.1872, 0.4788 0 0.186, 0.4788 0.06 0.186, 0.4764 0 0.1848, 0.4764 0.06 0.1848, 0.4752 0 0.1896, 0.4752 0.06 0.1896, 0.4764 0 0.1944, 0.4764 0.06 0.1944, 0.468 0 0.1884, 0.468 0.06 0.1884, 0.468 0 0.1956, 0.468 0.06 0.1956, 0.4668 0 0.204, 0.4668 0.06 0.204, 0.4656 0 0.2064, 0.4656 0.06 0.2064, 0.4644 0 0.2088, 0.4644 0.06 0.2088, 0.462 0 0.2112, 0.462 0.06 0.2112, 0.4608 0 0.2136, 0.4608 0.06 0.2136, 0.4608 0 0.2184, 0.4608 0.06 0.2184, 0.4632 0 0.2196, 0.4632 0.06 0.2196, 0.468 0 0.2196, 0.468 0.06 0.2196, 0.4716 0 0.2208, 0.4716 0.06 0.2208, 0.4764 0 0.222, 0.4764 0.06 0.222, 0.4848 0 0.2232, 0.4848 0.06 0.2232, 0.4896 0 0.2244, 0.4896 0.06 0.2244, 0.4932 0 0.2232, 0.4932 0.06 0.2232, 0.498 0 0.2184, 0.498 0.06 0.2184, 0.4992 0 0.216, 0.4992 0.06 0.216, 0.4992 0 0.2124, 0.4992 0.06 0.2124, 0.5004 0 0.2088, 0.5004 0.06 0.2088, 0.5016 0 0.2064, 0.5016 0.06 0.2064, 0.5052 0 0.2028, 0.5052 0.06 0.2028, 0.5076 0 0.1992, 0.5076 0.06 0.1992, 0.5088 0 0.1968, 0.5088 0.06 0.1968, 0.5088 0 0.1896, 0.5088 0.06 0.1896, 0.5076 0 0.1872, 0.5076 0.06 0.1872, 0.5052 0 0.1848, 0.5052 0.06 0.1848, 0.5028 0 0.1824, 0.5028 0.06 0.1824, 0.5004 0 0.1812, 0.5004 0.06 0.1812, 0.498 0 0.18, 0.498 0.06 0.18, 0.4956 0 0.18, 0.4956 0.06 0.18
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 0, 1, 79, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, -1
+                ]
+              }
+            }
+          ]
+          name "curved27"
+          boundingObject USE CURVED27
+        }
+        Solid {
+          children [
+            DEF CURVED28 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.438 0 0.1764, 0.438 0.06 0.1764, 0.4332 0 0.1776, 0.4332 0.06 0.1776, 0.4284 0 0.1788, 0.4284 0.06 0.1788, 0.4236 0 0.18, 0.4236 0.06 0.18, 0.42 0 0.1812, 0.42 0.06 0.1812, 0.4176 0 0.1836, 0.4176 0.06 0.1836, 0.4152 0 0.1848, 0.4152 0.06 0.1848, 0.4116 0 0.1872, 0.4116 0.06 0.1872, 0.4104 0 0.1896, 0.4104 0.06 0.1896, 0.4104 0 0.192, 0.4104 0.06 0.192, 0.4092 0 0.2016, 0.4092 0.06 0.2016, 0.4104 0 0.2052, 0.4104 0.06 0.2052, 0.4116 0 0.2088, 0.4116 0.06 0.2088, 0.4128 0 0.2112, 0.4128 0.06 0.2112, 0.4152 0 0.2124, 0.4152 0.06 0.2124, 0.4176 0 0.2136, 0.4176 0.06 0.2136, 0.42 0 0.2148, 0.42 0.06 0.2148, 0.4248 0 0.216, 0.4248 0.06 0.216, 0.4344 0 0.2172, 0.4344 0.06 0.2172, 0.4392 0 0.216, 0.4392 0.06 0.216, 0.4416 0 0.2148, 0.4416 0.06 0.2148, 0.444 0 0.2136, 0.444 0.06 0.2136, 0.4548 0 0.2028, 0.4548 0.06 0.2028, 0.4572 0 0.1992, 0.4572 0.06 0.1992, 0.4584 0 0.1968, 0.4584 0.06 0.1968, 0.4596 0 0.1944, 0.4596 0.06 0.1944, 0.4596 0 0.192, 0.4596 0.06 0.192, 0.4608 0 0.1872, 0.4608 0.06 0.1872, 0.456 0 0.1908, 0.456 0.06 0.1908, 0.4512 0 0.1944, 0.4512 0.06 0.1944, 0.4476 0 0.1968, 0.4476 0.06 0.1968, 0.4452 0 0.1956, 0.4452 0.06 0.1956, 0.4464 0 0.1932, 0.4464 0.06 0.1932, 0.45 0 0.1896, 0.45 0.06 0.1896, 0.4536 0 0.1848, 0.4536 0.06 0.1848, 0.4548 0 0.1824, 0.4548 0.06 0.1824, 0.4488 0 0.1824, 0.4488 0.06 0.1824, 0.4416 0 0.1812, 0.4416 0.06 0.1812, 0.4416 0 0.1788, 0.4416 0.06 0.1788, 0.4452 0 0.1788, 0.4452 0.06 0.1788, 0.4488 0 0.1776, 0.4488 0.06 0.1776
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 0, 1, 81, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, -1
+                ]
+              }
+            }
+          ]
+          name "curved28"
+          boundingObject USE CURVED28
+        }
+        Solid {
+          children [
+            DEF CURVED29 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.42 0 0.1752
+                    0.42 0.06 0.1752
+                    0.4224 0 0.1752
+                    0.4224 0.06 0.1752
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 0, 1, 3, -1
+                  1, 3, -1
+                ]
+              }
+            }
+          ]
+          name "curved29"
+          boundingObject USE CURVED29
+        }
+        Solid {
+          children [
+            DEF CURVED30 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.462 0 0.1656, 0.462 0.06 0.1656, 0.4608 0 0.168, 0.4608 0.06 0.168, 0.4596 0 0.1716, 0.4596 0.06 0.1716, 0.4596 0 0.174, 0.4596 0.06 0.174, 0.4596 0 0.1764, 0.4596 0.06 0.1764, 0.462 0 0.1788, 0.462 0.06 0.1788, 0.4656 0 0.1788, 0.4656 0.06 0.1788, 0.468 0 0.1788, 0.468 0.06 0.1788, 0.4716 0 0.1788, 0.4716 0.06 0.1788, 0.4752 0 0.1752, 0.4752 0.06 0.1752, 0.4752 0 0.1704, 0.4752 0.06 0.1704, 0.4716 0 0.1668, 0.4716 0.06 0.1668, 0.4692 0 0.1668, 0.4692 0.06 0.1668
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 0, 1, 25, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, -1
+                ]
+              }
+            }
+          ]
+          name "curved30"
+          boundingObject USE CURVED30
+        }
+        Solid {
+          children [
+            DEF CURVED31 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.3792 0 0.1608, 0.3792 0.06 0.1608, 0.3768 0 0.162, 0.3768 0.06 0.162, 0.3756 0 0.1656, 0.3756 0.06 0.1656, 0.3816 0 0.1656, 0.3816 0.06 0.1656, 0.3864 0 0.1668, 0.3864 0.06 0.1668, 0.3888 0 0.168, 0.3888 0.06 0.168, 0.3924 0 0.1692, 0.3924 0.06 0.1692, 0.3984 0 0.1752, 0.3984 0.06 0.1752, 0.4008 0 0.1788, 0.4008 0.06 0.1788, 0.4104 0 0.1788, 0.4104 0.06 0.1788, 0.414 0 0.1776, 0.414 0.06 0.1776, 0.4176 0 0.1764, 0.4176 0.06 0.1764, 0.4116 0 0.1764, 0.4116 0.06 0.1764, 0.4092 0 0.1752, 0.4092 0.06 0.1752, 0.4068 0 0.1728, 0.4068 0.06 0.1728, 0.4032 0 0.1704, 0.4032 0.06 0.1704, 0.3996 0 0.168, 0.3996 0.06 0.168, 0.3972 0 0.1668, 0.3972 0.06 0.1668, 0.3936 0 0.1644, 0.3936 0.06 0.1644, 0.3912 0 0.1632, 0.3912 0.06 0.1632, 0.3888 0 0.1632, 0.3888 0.06 0.1632, 0.3864 0 0.162, 0.3864 0.06 0.162
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 0, 1, 43, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, -1
+                ]
+              }
+            }
+          ]
+          name "curved31"
+          boundingObject USE CURVED31
+        }
+        Solid {
+          children [
+            DEF CURVED32 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4092 0 0.1416, 0.4092 0.06 0.1416, 0.402 0 0.1428, 0.402 0.06 0.1428, 0.3984 0 0.144, 0.3984 0.06 0.144, 0.396 0 0.1452, 0.396 0.06 0.1452, 0.3936 0 0.1464, 0.3936 0.06 0.1464, 0.3912 0 0.1476, 0.3912 0.06 0.1476, 0.3888 0 0.15, 0.3888 0.06 0.15, 0.3828 0 0.1548, 0.3828 0.06 0.1548, 0.3852 0 0.156, 0.3852 0.06 0.156, 0.3876 0 0.156, 0.3876 0.06 0.156, 0.39 0 0.1572, 0.39 0.06 0.1572, 0.3936 0 0.1584, 0.3936 0.06 0.1584, 0.396 0 0.1596, 0.396 0.06 0.1596, 0.3984 0 0.162, 0.3984 0.06 0.162, 0.4032 0 0.1656, 0.4032 0.06 0.1656, 0.408 0 0.1692, 0.408 0.06 0.1692, 0.4128 0 0.1692, 0.4128 0.06 0.1692, 0.4476 0 0.1704, 0.4476 0.06 0.1704, 0.4464 0 0.168, 0.4464 0.06 0.168, 0.444 0 0.1668, 0.444 0.06 0.1668, 0.4416 0 0.1656, 0.4416 0.06 0.1656, 0.4524 0 0.1644, 0.4524 0.06 0.1644, 0.45 0 0.1632, 0.45 0.06 0.1632, 0.4464 0 0.1596, 0.4464 0.06 0.1596, 0.444 0 0.1584, 0.444 0.06 0.1584, 0.4416 0 0.1572, 0.4416 0.06 0.1572, 0.4452 0 0.156, 0.4452 0.06 0.156, 0.45 0 0.1572, 0.45 0.06 0.1572, 0.4536 0 0.1584, 0.4536 0.06 0.1584, 0.4524 0 0.156, 0.4524 0.06 0.156, 0.4488 0 0.1536, 0.4488 0.06 0.1536, 0.4464 0 0.1524, 0.4464 0.06 0.1524, 0.444 0 0.1512, 0.444 0.06 0.1512, 0.4416 0 0.15, 0.4416 0.06 0.15, 0.4392 0 0.1488, 0.4392 0.06 0.1488, 0.4368 0 0.1476, 0.4368 0.06 0.1476, 0.4344 0 0.1464, 0.4344 0.06 0.1464, 0.432 0 0.1464, 0.432 0.06 0.1464, 0.4284 0 0.1452, 0.4284 0.06 0.1452, 0.4248 0 0.144, 0.4248 0.06 0.144, 0.4164 0 0.1428, 0.4164 0.06 0.1428
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 0, 1, 81, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, -1
+                ]
+              }
+            }
+          ]
+          name "curved32"
+          boundingObject USE CURVED32
+        }
+        Solid {
+          children [
+            DEF CURVED33 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4824 0 0.1284, 0.4824 0.06 0.1284, 0.48 0 0.1296, 0.48 0.06 0.1296, 0.4752 0 0.1344, 0.4752 0.06 0.1344, 0.474 0 0.1368, 0.474 0.06 0.1368, 0.4728 0 0.1392, 0.4728 0.06 0.1392, 0.4728 0 0.1416, 0.4728 0.06 0.1416, 0.4716 0 0.1452, 0.4716 0.06 0.1452, 0.4704 0 0.1524, 0.4704 0.06 0.1524, 0.4692 0 0.1572, 0.4692 0.06 0.1572, 0.4704 0 0.1596, 0.4704 0.06 0.1596, 0.4728 0 0.1608, 0.4728 0.06 0.1608, 0.4752 0 0.162, 0.4752 0.06 0.162, 0.4776 0 0.1596, 0.4776 0.06 0.1596, 0.4824 0 0.1536, 0.4824 0.06 0.1536, 0.4836 0 0.1584, 0.4836 0.06 0.1584, 0.4824 0 0.1632, 0.4824 0.06 0.1632, 0.4812 0 0.1656, 0.4812 0.06 0.1656, 0.4908 0 0.1656, 0.4908 0.06 0.1656, 0.5004 0 0.1644, 0.5004 0.06 0.1644, 0.5004 0 0.1668, 0.5004 0.06 0.1668, 0.498 0 0.1668, 0.498 0.06 0.1668, 0.4944 0 0.168, 0.4944 0.06 0.168, 0.492 0 0.1692, 0.492 0.06 0.1692, 0.4884 0 0.1704, 0.4884 0.06 0.1704, 0.4848 0 0.1716, 0.4848 0.06 0.1716, 0.4872 0 0.1728, 0.4872 0.06 0.1728, 0.4944 0 0.1728, 0.4944 0.06 0.1728, 0.498 0 0.174, 0.498 0.06 0.174, 0.5028 0 0.1752, 0.5028 0.06 0.1752, 0.5052 0 0.1764, 0.5052 0.06 0.1764, 0.5232 0 0.1776, 0.5232 0.06 0.1776, 0.5316 0 0.1764, 0.5316 0.06 0.1764, 0.534 0 0.1752, 0.534 0.06 0.1752, 0.5352 0 0.1728, 0.5352 0.06 0.1728, 0.534 0 0.1704, 0.534 0.06 0.1704, 0.534 0 0.168, 0.534 0.06 0.168, 0.5328 0 0.1656, 0.5328 0.06 0.1656, 0.5316 0 0.1632, 0.5316 0.06 0.1632, 0.5304 0 0.1596, 0.5304 0.06 0.1596, 0.5292 0 0.1428, 0.5292 0.06 0.1428, 0.528 0 0.1404, 0.528 0.06 0.1404, 0.5244 0 0.1404, 0.5244 0.06 0.1404, 0.5076 0 0.1392, 0.5076 0.06 0.1392, 0.5052 0 0.138, 0.5052 0.06 0.138, 0.5016 0 0.1368, 0.5016 0.06 0.1368, 0.4992 0 0.1344, 0.4992 0.06 0.1344, 0.4968 0 0.1332, 0.4968 0.06 0.1332, 0.4932 0 0.1308, 0.4932 0.06 0.1308, 0.4908 0 0.1296, 0.4908 0.06 0.1296, 0.4884 0 0.1296, 0.4884 0.06 0.1296
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 0, 1, 99, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, -1
+                ]
+              }
+            }
+          ]
+          name "curved33"
+          boundingObject USE CURVED33
+        }
+        Solid {
+          children [
+            DEF CURVED34 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4812 0 0.1188, 0.4812 0.06 0.1188, 0.4752 0 0.1248, 0.4752 0.06 0.1248, 0.4776 0 0.1248, 0.4776 0.06 0.1248, 0.48 0 0.1236, 0.48 0.06 0.1236, 0.4824 0 0.1224, 0.4824 0.06 0.1224, 0.4884 0 0.1224, 0.4884 0.06 0.1224, 0.492 0 0.1236, 0.492 0.06 0.1236, 0.4944 0 0.1248, 0.4944 0.06 0.1248, 0.4968 0 0.126, 0.4968 0.06 0.126, 0.4992 0 0.1284, 0.4992 0.06 0.1284, 0.5016 0 0.1296, 0.5016 0.06 0.1296, 0.5052 0 0.132, 0.5052 0.06 0.132, 0.5076 0 0.132, 0.5076 0.06 0.132, 0.5124 0 0.1332, 0.5124 0.06 0.1332, 0.5268 0 0.1344, 0.5268 0.06 0.1344, 0.5328 0 0.1356, 0.5328 0.06 0.1356, 0.534 0 0.138, 0.534 0.06 0.138, 0.5352 0 0.156, 0.5352 0.06 0.156, 0.5364 0 0.1596, 0.5364 0.06 0.1596, 0.5376 0 0.162, 0.5376 0.06 0.162, 0.5388 0 0.1644, 0.5388 0.06 0.1644, 0.54 0 0.1668, 0.54 0.06 0.1668, 0.5412 0 0.1704, 0.5412 0.06 0.1704, 0.5424 0 0.1752, 0.5424 0.06 0.1752, 0.5412 0 0.1776, 0.5412 0.06 0.1776, 0.5388 0 0.18, 0.5388 0.06 0.18, 0.5364 0 0.1812, 0.5364 0.06 0.1812, 0.5328 0 0.1812, 0.5328 0.06 0.1812, 0.5256 0 0.1824, 0.5256 0.06 0.1824, 0.5196 0 0.1836, 0.5196 0.06 0.1836, 0.522 0 0.1836, 0.522 0.06 0.1836, 0.5268 0 0.1848, 0.5268 0.06 0.1848, 0.5376 0 0.186, 0.5376 0.06 0.186, 0.5424 0 0.1848, 0.5424 0.06 0.1848, 0.5448 0 0.1836, 0.5448 0.06 0.1836, 0.5472 0 0.1824, 0.5472 0.06 0.1824, 0.5508 0 0.1788, 0.5508 0.06 0.1788, 0.5508 0 0.1752, 0.5508 0.06 0.1752, 0.5448 0 0.1692, 0.5448 0.06 0.1692, 0.5412 0 0.1644, 0.5412 0.06 0.1644, 0.54 0 0.162, 0.54 0.06 0.162, 0.5388 0 0.1596, 0.5388 0.06 0.1596, 0.5388 0 0.1524, 0.5388 0.06 0.1524, 0.54 0 0.1476, 0.54 0.06 0.1476, 0.5412 0 0.1428, 0.5412 0.06 0.1428, 0.5424 0 0.138, 0.5424 0.06 0.138, 0.5412 0 0.1356, 0.5412 0.06 0.1356, 0.5388 0 0.1332, 0.5388 0.06 0.1332, 0.5364 0 0.132, 0.5364 0.06 0.132, 0.534 0 0.132, 0.534 0.06 0.132, 0.5268 0 0.1308, 0.5268 0.06 0.1308, 0.5124 0 0.1296, 0.5124 0.06 0.1296, 0.5088 0 0.1284, 0.5088 0.06 0.1284, 0.5052 0 0.1272, 0.5052 0.06 0.1272, 0.5028 0 0.126, 0.5028 0.06 0.126, 0.5004 0 0.1248, 0.5004 0.06 0.1248, 0.498 0 0.1224, 0.498 0.06 0.1224, 0.4956 0 0.1224, 0.4956 0.06 0.1224, 0.4932 0 0.1212, 0.4932 0.06 0.1212, 0.4908 0 0.12, 0.4908 0.06 0.12
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 64, 65, 63, -1, 64, 66, 67, 65, -1, 66, 68, 69, 67, -1, 68, 70, 71, 69, -1, 70, 72, 73, 71, -1, 72, 74, 75, 73, -1, 74, 76, 77, 75, -1, 76, 78, 79, 77, -1, 78, 80, 81, 79, -1, 80, 82, 83, 81, -1, 82, 84, 85, 83, -1, 84, 86, 87, 85, -1, 86, 88, 89, 87, -1, 88, 90, 91, 89, -1, 90, 92, 93, 91, -1, 92, 94, 95, 93, -1, 94, 96, 97, 95, -1, 96, 98, 99, 97, -1, 98, 100, 101, 99, -1, 100, 102, 103, 101, -1, 102, 104, 105, 103, -1, 104, 106, 107, 105, -1, 106, 108, 109, 107, -1, 108, 110, 111, 109, -1, 110, 112, 113, 111, -1, 112, 114, 115, 113, -1, 114, 116, 117, 115, -1, 116, 118, 119, 117, -1, 118, 0, 1, 119, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, -1
+                ]
+              }
+            }
+          ]
+          name "curved34"
+          boundingObject USE CURVED34
+        }
+        Solid {
+          children [
+            DEF CURVED35 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.4224 0 0.114, 0.4224 0.06 0.114, 0.4224 0 0.1188, 0.4224 0.06 0.1188, 0.4236 0 0.1248, 0.4236 0.06 0.1248, 0.4248 0 0.1272, 0.4248 0.06 0.1272, 0.4272 0 0.1296, 0.4272 0.06 0.1296, 0.4308 0 0.1344, 0.4308 0.06 0.1344, 0.4344 0 0.138, 0.4344 0.06 0.138, 0.4392 0 0.1416, 0.4392 0.06 0.1416, 0.444 0 0.1452, 0.444 0.06 0.1452, 0.4476 0 0.1476, 0.4476 0.06 0.1476, 0.45 0 0.1488, 0.45 0.06 0.1488, 0.4548 0 0.1524, 0.4548 0.06 0.1524, 0.4572 0 0.1536, 0.4572 0.06 0.1536, 0.456 0 0.15, 0.456 0.06 0.15, 0.4536 0 0.1476, 0.4536 0.06 0.1476, 0.4524 0 0.1452, 0.4524 0.06 0.1452, 0.4536 0 0.1428, 0.4536 0.06 0.1428, 0.456 0 0.1452, 0.456 0.06 0.1452, 0.4632 0 0.1512, 0.4632 0.06 0.1512, 0.4632 0 0.1476, 0.4632 0.06 0.1476, 0.4644 0 0.1404, 0.4644 0.06 0.1404, 0.4656 0 0.12, 0.4656 0.06 0.12, 0.4632 0 0.1176, 0.4632 0.06 0.1176, 0.4608 0 0.1164, 0.4608 0.06 0.1164, 0.4524 0 0.1164, 0.4524 0.06 0.1164, 0.4488 0 0.1176, 0.4488 0.06 0.1176, 0.4416 0 0.1188, 0.4416 0.06 0.1188, 0.4392 0 0.1188, 0.4392 0.06 0.1188, 0.4332 0 0.1188, 0.4332 0.06 0.1188, 0.4308 0 0.1176, 0.4308 0.06 0.1176, 0.4272 0 0.1164, 0.4272 0.06 0.1164, 0.4248 0 0.114, 0.4248 0.06 0.114
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 36, 37, 35, -1, 36, 38, 39, 37, -1, 38, 40, 41, 39, -1, 40, 42, 43, 41, -1, 42, 44, 45, 43, -1, 44, 46, 47, 45, -1, 46, 48, 49, 47, -1, 48, 50, 51, 49, -1, 50, 52, 53, 51, -1, 52, 54, 55, 53, -1, 54, 56, 57, 55, -1, 56, 58, 59, 57, -1, 58, 60, 61, 59, -1, 60, 62, 63, 61, -1, 62, 0, 1, 63, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39, 41, 43, 45, 47, 49, 51, 53, 55, 57, 59, 61, 63, -1
+                ]
+              }
+            }
+          ]
+          name "curved35"
+          boundingObject USE CURVED35
+        }
+        Solid {
+          children [
+            DEF CURVED36 Shape {
+              appearance Appearance {
+                material Material {
+                  diffuseColor 0.2 0.47 0.52
+                }
+              }
+              geometry IndexedFaceSet {
+                coord Coordinate {
+                  point [
+                    0.426 0 0.102, 0.426 0.06 0.102, 0.426 0 0.108, 0.426 0.06 0.108, 0.4284 0 0.1104, 0.4284 0.06 0.1104, 0.4308 0 0.1116, 0.4308 0.06 0.1116, 0.4332 0 0.1116, 0.4332 0.06 0.1116, 0.4428 0 0.1128, 0.4428 0.06 0.1128, 0.45 0 0.1116, 0.45 0.06 0.1116, 0.4584 0 0.1104, 0.4584 0.06 0.1104, 0.4632 0 0.1116, 0.4632 0.06 0.1116, 0.4656 0 0.1128, 0.4656 0.06 0.1128, 0.468 0 0.1152, 0.468 0.06 0.1152, 0.4644 0 0.1092, 0.4644 0.06 0.1092, 0.462 0 0.108, 0.462 0.06 0.108, 0.4596 0 0.1068, 0.4596 0.06 0.1068, 0.4572 0 0.1068, 0.4572 0.06 0.1068, 0.4332 0 0.1056, 0.4332 0.06 0.1056, 0.4308 0 0.1044, 0.4308 0.06 0.1044, 0.4284 0 0.102, 0.4284 0.06 0.102
+                  ]
+                }
+                coordIndex [
+                  0, 2, 3, 1, -1, 2, 4, 5, 3, -1, 4, 6, 7, 5, -1, 6, 8, 9, 7, -1, 8, 10, 11, 9, -1, 10, 12, 13, 11, -1, 12, 14, 15, 13, -1, 14, 16, 17, 15, -1, 16, 18, 19, 17, -1, 18, 20, 21, 19, -1, 20, 22, 23, 21, -1, 22, 24, 25, 23, -1, 24, 26, 27, 25, -1, 26, 28, 29, 27, -1, 28, 30, 31, 29, -1, 30, 32, 33, 31, -1, 32, 34, 35, 33, -1, 34, 0, 1, 35, -1, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, -1
+                ]
+              }
+            }
+          ]
+          name "curved36"
+          boundingObject USE CURVED36
+        }
+      ]
+      name "Area4"
+    }
+  ]
+}
+DEF CHECKPOINTBOUNDS Group {
+  children [
+    DEF boundary Group {
+      children [
+        DEF checkpoint0min Pose {
+          translation -0.42 -0.03 0.12
+        }
+        DEF checkpoint0max Pose {
+          translation -0.3 -0.03 0.24
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF checkpoint1min Pose {
+          translation 0.06000000000000011 -0.03 0.12
+        }
+        DEF checkpoint1max Pose {
+          translation 0.1800000000000001 -0.03 0.24
+        }
+      ]
+    }
+  ]
+}
+DEF TRAPBOUNDS Group {
+  children [
+    DEF boundary Group {
+      children [
+        DEF trap0min Pose {
+          translation -0.54 -0.03 -0.12
+        }
+        DEF trap0max Pose {
+          translation -0.42 -0.03 0
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF trap1min Pose {
+          translation -0.17999999999999988 -0.03 0
+        }
+        DEF trap1max Pose {
+          translation -0.05999999999999989 -0.03 0.12
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF trap2min Pose {
+          translation 0.06000000000000011 -0.03 -0.24
+        }
+        DEF trap2max Pose {
+          translation 0.1800000000000001 -0.03 -0.12
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF trap3min Pose {
+          translation 0.2999999999999999 -0.03 0.12
+        }
+        DEF trap3max Pose {
+          translation 0.4199999999999999 -0.03 0.24
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF trap4min Pose {
+          translation 0.4200000000000002 -0.03 -0.36
+        }
+        DEF trap4max Pose {
+          translation 0.5400000000000003 -0.03 -0.24
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF trap5min Pose {
+          translation 0.54 -0.03 -0.36
+        }
+        DEF trap5max Pose {
+          translation 0.6600000000000001 -0.03 -0.24
+        }
+      ]
+    }
+  ]
+}
+DEF STARTBOUNDS Group {
+  children [
+    DEF boundary Group {
+      children [
+        DEF start0min Pose {
+          translation -0.6599999999999999 -0.03 -0.24
+        }
+        DEF start0max Pose {
+          translation -0.54 -0.03 -0.12
+        }
+      ]
+    }
+  ]
+}
+DEF SWAMPBOUNDS Group {
+  children [
+    DEF boundary Group {
+      children [
+        DEF swamp0min Pose {
+          translation -0.78 -0.03 -0.12
+        }
+        DEF swamp0max Pose {
+          translation -0.6599999999999999 -0.03 0
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF swamp1min Pose {
+          translation -0.42 -0.03 0.12
+        }
+        DEF swamp1max Pose {
+          translation -0.3 -0.03 0.24
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF swamp2min Pose {
+          translation -0.17999999999999988 -0.03 -0.36
+        }
+        DEF swamp2max Pose {
+          translation -0.05999999999999989 -0.03 -0.24
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF swamp3min Pose {
+          translation -0.17999999999999988 -0.03 -0.12
+        }
+        DEF swamp3max Pose {
+          translation -0.05999999999999989 -0.03 0
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF swamp4min Pose {
+          translation 0.06000000000000011 -0.03 -0.12
+        }
+        DEF swamp4max Pose {
+          translation 0.1800000000000001 -0.03 0
+        }
+      ]
+    }
+    DEF boundary Group {
+      children [
+        DEF swamp5min Pose {
+          translation 0.54 -0.03 -0.12
+        }
+        DEF swamp5max Pose {
+          translation 0.6600000000000001 -0.03 0
+        }
+      ]
+    }
+  ]
+}
+DEF OBSTACLES Group {
+  children [
+    DEF OBSTACLE0 Solid {
+      translation -0.7102499999999999 0 -0.19226
+      rotation 0 1 0 1.7850000000000001
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.45 0.45 0.45
+            }
+          }
+          geometry DEF OBSTACLEBOX0 Box {
+            size 0.0342129304538405 0.06 0.050217667441298325
+          }
+        }
+      ]
+      name "obstacle0"
+      boundingObject USE OBSTACLEBOX0
+      recognitionColors [
+        0.45 0.45 0.45
+      ]
+    }
+    DEF OBSTACLE1 Solid {
+      translation -0.489784 0 0.184082
+      rotation 0 1 0 0.442
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.45 0.45 0.45
+            }
+          }
+          geometry DEF OBSTACLEBOX1 Box {
+            size 0.034920709334573356 0.06 0.02082019902818744
+          }
+        }
+      ]
+      name "obstacle1"
+      boundingObject USE OBSTACLEBOX1
+      recognitionColors [
+        0.45 0.45 0.45
+      ]
+    }
+    DEF OBSTACLE2 Solid {
+      translation -0.36555 0 -0.28548999999999997
+      rotation 0 1 0 2.207
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.45 0.45 0.45
+            }
+          }
+          geometry DEF OBSTACLEBOX2 Box {
+            size 0.051520114092249505 0.06 0.02624941581156999
+          }
+        }
+      ]
+      name "obstacle2"
+      boundingObject USE OBSTACLEBOX2
+      recognitionColors [
+        0.45 0.45 0.45
+      ]
+    }
+    DEF OBSTACLE3 Solid {
+      translation 0.343553 0 -0.299284
+      rotation 0 1 0 2.695
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.45 0.45 0.45
+            }
+          }
+          geometry DEF OBSTACLEBOX3 Box {
+            size 0.04358533503847342 0.06 0.026566296839072745
+          }
+        }
+      ]
+      name "obstacle3"
+      boundingObject USE OBSTACLEBOX3
+      recognitionColors [
+        0.45 0.45 0.45
+      ]
+    }
+  ]
+}
+DEF HUMANGROUP Group {
+  children [
+    Victim {
+      translation -0.7143999999999999 0 0.030399999999999996
+      rotation -0.7013986817019502 0.12367551181740251 0.7019574467754224 3.387888075812245
+      name "Victim0"
+      scoreWorth 5
+    }
+    Victim {
+      translation -0.63 0 0.1744
+      rotation 0 0 0.9999999999999999 0.7853981633974484
+      name "Victim1"
+      type "unharmed"
+      scoreWorth 5
+    }
+    Victim {
+      translation -0.48 0 -0.355
+      rotation 0.573576376519988 0.8191519588413856 0.00045675433409072457 3.140288028191233
+      name "Victim2"
+      type "stable"
+      scoreWorth 5
+    }
+    Victim {
+      translation -0.51 0 0.005599999999999994
+      rotation 0 1 0 3.14
+      name "Victim3"
+      type "stable"
+      scoreWorth 5
+    }
+    Victim {
+      translation -0.44999999999999996 0 0.005599999999999994
+      rotation 0.9999996829318346 6.123232054254197e-17 0.0007963267107332633 3.141592653589793
+      name "Victim4"
+      type "stable"
+      scoreWorth 5
+    }
+    Victim {
+      translation -0.40599999999999997 0 -0.226
+      rotation 0.31886944577421733 0.5522980810622735 0.7702526249267664 1.2864384192473268
+      name "Victim5"
+      scoreWorth 5
+    }
+    Victim {
+      translation -0.13399999999999987 0 -0.167
+      rotation 0 -0.9999999999999997 0 0.7850000000000003
+      name "Victim6"
+      type "unharmed"
+      scoreWorth 15
+    }
+    Victim {
+      translation 0.24 0 -0.355
+      rotation 0.7071066690859958 0.707106669085996 0.0005630881064681181 3.140466477495882
+      name "Victim7"
+      scoreWorth 15
+    }
+    Victim {
+      translation 0.18289999999999995 0 0.03372000000000003
+      rotation 0.6125018077318076 -0.7816947781182937 -0.11745130645445981 2.8440177749462565
+      name "Victim10"
+      scoreWorth 15
+    }
+    Victim {
+      translation 0.17302999999999993 0 -0.007879999999999998
+      rotation 0.818462685507356 -0.2741477119885422 -0.5049374856787069 2.8065016597130383
+      name "Victim13"
+      scoreWorth 15
+    }
+    Victim {
+      translation 0.08857999999999994 0 -0.026660000000000017
+      rotation -0.16014774682894567 -0.020752475960519778 0.9868748826103134 2.8872083476961437
+      name "Victim14"
+      type "unharmed"
+      scoreWorth 15
+    }
+    Victim {
+      translation 0.496 0 -0.13707
+      rotation 0.9031626744756439 -0.2587480950796849 -0.34255890986316 2.945939014593204
+      name "Victim16"
+      type "unharmed"
+      scoreWorth 15
+    }
+    Victim {
+      translation 0.45136999999999994 0 -0.23962
+      rotation -0.11454554093975013 0.5864861060084922 0.8018187865782508 5.805328062397068
+      name "Victim19"
+      scoreWorth 15
+    }
+  ]
+}
+DEF FAKES Group {
+  children [
+    Fake {
+      translation -0.425 0 -0.18
+      rotation 0 1.0000000000000002 0 1.57
+      name "Fake3"
+      scoreWorth 0
+    }
+    Fake {
+      translation -0.48 0 0.0049999999999999906
+      rotation 0 1 0 3.14
+      name "Fake3"
+      type "psi"
+      scoreWorth 0
+    }
+    Fake {
+      translation -0.1856 0 0.09
+      rotation 0 1.0000000000000002 0 1.57
+      name "Fake6"
+      type "phi"
+      scoreWorth 0
+    }
+    Fake {
+      translation -0.07399999999999987 0 -0.254
+      rotation 0 -1 0 2.355
+      name "Fake6"
+      type "psi"
+      scoreWorth 0
+    }
+    Fake {
+      translation -0.14999999999999988 0 0.2344
+      name "Fake7"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.33358999999999994 0 0.13915
+      rotation 0 1.0000000000000002 0 1.4056476493802696
+      name "Fake8"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.32084999999999997 0 0.07801000000000002
+      rotation 0 1 0 2.354601836602552
+      name "Fake9"
+      type "psi"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.31303999999999993 0 0.03495999999999999
+      rotation 0 1.0000000000000002 0 0.7086262721276702
+      name "Fake11"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.06485999999999995 0 0.013800000000000034
+      rotation 0 1 0 0.38050637711236485
+      name "Fake12"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.31922999999999996 0 -0.10470999999999997
+      rotation 0 1 0 2.0328512822059097
+      name "Fake15"
+      type "phi"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.3287999999999999 0 -0.19354
+      rotation 0 1 0 2.620853885753477
+      name "Fake17"
+      type "psi"
+      scoreWorth 0
+    }
+    Fake {
+      translation 0.48549 0 -0.19904
+      rotation 0 -1.0000000000000002 0 0.9151007005533602
+      name "Fake18"
+      type "psi"
+      scoreWorth 0
+    }
+  ]
+}
+DEF TARGETGROUP Group {
+  children [
+    CognitiveTarget {
+      translation -0.7744 0 -0.3
+      rotation 0 -1.0000000000000002 0 1.57
+      name "Hazard0"
+      type "BGYRK"
+      texture "targets/BGYRK"
+    }
+    CognitiveTarget {
+      translation -0.75 0 0.06559999999999999
+      rotation 0 1 0 3.14
+      name "Hazard1"
+      type "YYYGR"
+      texture "targets/YYYGR"
+    }
+    CognitiveTarget {
+      translation -0.69 0 0.1744
+      name "Hazard2"
+      type "BBKYY"
+      texture "targets/BBKYY"
+    }
+    CognitiveTarget {
+      translation -0.6 0 -0.3544
+      rotation 0 1 0 3.14
+      name "Hazard3"
+      type "KBBBB"
+      scoreWorth 0
+      texture "targets/KBBBB"
+    }
+    CognitiveTarget {
+      translation -0.374 0 -0.04699999999999999
+      rotation 0 -0.9999999999999997 0 0.7850000000000003
+      name "Hazard4"
+      type "YYGYY"
+      texture "targets/YYGYY"
+    }
+    CognitiveTarget {
+      translation -0.39 0 0.005599999999999994
+      rotation 0 1 0 3.14
+      name "Hazard5"
+      type "GBBYY"
+      scoreWorth 0
+      texture "targets/GBBYY"
+    }
+    CognitiveTarget {
+      translation -0.32999999999999996 0 0.1144
+      name "Hazard6"
+      type "GYBRY"
+      texture "targets/GYBRY"
+    }
+    CognitiveTarget {
+      translation -0.27 0 -0.3544
+      rotation 0 1 0 3.14
+      name "Hazard7"
+      type "GGYBB"
+      scoreWorth 0
+      texture "targets/GGYBB"
+    }
+    CognitiveTarget {
+      translation -0.2944 0 0.21
+      rotation 0 -1.0000000000000002 0 1.57
+      name "Hazard8"
+      type "YGGGY"
+      texture "targets/YGGGY"
+    }
+    CognitiveTarget {
+      translation -0.1669999999999999 0 -0.255
+      rotation 0 1 0 2.355
+      name "Hazard9"
+      type "YYYYY"
+      scoreWorth 30
+      texture "targets/YYYYY"
+    }
+    CognitiveTarget {
+      translation -0.08999999999999989 0 0.2344
+      name "Hazard10"
+      type "KKYBB"
+      texture "targets/KKYBB"
+    }
+    CognitiveTarget {
+      translation 0.013000000000000001 0 -0.315
+      rotation 0 1 0 2.355
+      name "Hazard11"
+      type "KBKBG"
+      scoreWorth 30
+      texture "targets/KBKBG"
+    }
+    CognitiveTarget {
+      translation 0.013999999999999999 0 -0.166
+      rotation 0 0.9999999999999997 0 0.7850000000000003
+      name "Hazard12"
+      type "KBBYG"
+      scoreWorth 30
+      texture "targets/KBBYG"
+    }
+    CognitiveTarget {
+      translation 0 0 0.1144
+      name "Hazard13"
+      type "GYBBK"
+      scoreWorth 30
+      texture "targets/GYBBK"
+    }
+    CognitiveTarget {
+      translation 0.43385999999999997 0 0.17406
+      rotation 0.25280261571909696 -0.9638607044753533 -0.08404391622156779 2.5213989531202925
+      name "Hazard14"
+      type "YGRBG"
+      scoreWorth 30
+      texture "targets/YGRBG"
+    }
+    CognitiveTarget {
+      translation 0.46719 0 0.14037
+      rotation 0.39867660171547087 -0.8834942222678225 -0.2459571638801753 2.1435110813782785
+      name "Hazard15"
+      type "GBYKG"
+      scoreWorth 30
+      texture "targets/GBYKG"
+    }
+    CognitiveTarget {
+      translation 0.13339999999999994 0 0.08696999999999999
+      rotation 0.13162835929227698 0.9859748754236521 -0.10260370394550465 4.452144460221004
+      name "Hazard16"
+      type "YRGKB"
+      scoreWorth 30
+      texture "targets/YRGKB"
+    }
+    CognitiveTarget {
+      translation 0.3824199999999999 0 0.017620000000000025
+      rotation -0.26382350413936617 0.15220548732883793 0.9524865606876648 4.1465266799844915
+      name "Hazard17"
+      type "YRBRR"
+      scoreWorth 0
+      texture "targets/YRBRR"
+    }
+    CognitiveTarget {
+      translation 0.13359999999999994 0 -0.040949999999999986
+      rotation -0.3865898969099633 0.7242239822037003 0.5710060202906434 4.77971880456247
+      name "Hazard18"
+      type "BKKBB"
+      scoreWorth 30
+      texture "targets/BKKBB"
+    }
+    CognitiveTarget {
+      translation 0.35716 0 -0.05446
+      rotation 0.44352951914293615 0.8860835449874719 0.13467559894528366 2.6159309950841383
+      name "Hazard19"
+      type "YBRYR"
+      scoreWorth 30
+      texture "targets/YBRYR"
+    }
+    CognitiveTarget {
+      translation 0.4538899999999999 0 -0.06799
+      rotation 0.6788383258090362 -0.6462317733491019 -0.34865889136355005 2.500651387027766
+      name "Hazard20"
+      type "KBKGB"
+      scoreWorth 30
+      texture "targets/KBKGB"
+    }
+    CognitiveTarget {
+      translation 0.4919199999999999 0 -0.10059999999999997
+      rotation 0.24987164344725166 0.9682789485515615 0.00019897952702193828 3.140050520626109
+      name "Hazard21"
+      type "YKYKB"
+      scoreWorth 0
+      texture "targets/YKYKB"
+    }
+    CognitiveTarget {
+      translation 0.33299999999999996 0 -0.22008
+      rotation 0.22967688161675553 -0.025725660929505935 0.9729268833887483 3.3586872723150987
+      name "Hazard22"
+      type "BKRGY"
+      scoreWorth 30
+      texture "targets/BKRGY"
+    }
+    CognitiveTarget {
+      translation 0.38200999999999996 0 -0.25495
+      rotation 0.9085312429804067 -0.41781629586900826 0.0007234879257159799 3.1422580903293875
+      name "Hazard23"
+      type "GRBKG"
+      scoreWorth 30
+      texture "targets/GRBKG"
+    }
+  ]
+}
+DEF MAINSUPERVISOR Robot {
+  children [
+    Receiver {
+      channel 1
+    }
+    Emitter {
+      channel 1
+    }
+  ]
+  controller "MainSupervisor"
+  customData "480"
+  supervisor TRUE
+  window "MainSupervisorWindow"
+}
