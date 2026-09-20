@@ -17,3 +17,15 @@ game/protos/custom_robot.proto
 game/protos/textures/targets/
 
 game/controllers/robot0Controller/robot0Controller.py
+game/controllers/MainSupervisor/config.txt
+game/controllers/MainSupervisor/config.txt
+game/controllers/robot0Controller/Mapa final.txt
+game/controllers/robot0Controller/Mapa que nos mandaron.png
+game/controllers/robot0Controller/Mapa que recortamos en map_rect, despuÃ©s de aplicar el threshold.png
+game/controllers/robot0Controller/Mapa que recortamos en map_rect, despuÃ©s de recortar.png
+game/controllers/robot0Controller/Mapa que recortamos, después de cambiar 0 por 1 y 255 por 0.txt
+game/controllers/robot0Controller/Matriz final antes de flood fill.txt
+game/controllers/robot0Controller/Matriz final después de poner las paredes.txt
+game/controllers/robot0Controller/nav_map.png
+game/controllers/robot0Controller/willow.log
+game/controllers/MainSupervisor/config.txt
